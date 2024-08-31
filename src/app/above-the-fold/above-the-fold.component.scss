@@ -1,8 +1,12 @@
 @import "../../styles.scss";
 
+app-above-the-fold {
+    height: 100vh;
+}
+
 section {
   color: white;
-  height: 100vh;
+
   background-color: black;
   h1,
   h2,
@@ -29,6 +33,10 @@ section {
     rgba(0, 0, 0, 0.5) -52.37%,
     rgba(23, 22, 22, 0.5) 197.35%
   );
+  @include size (29px,100%);
+  opacity: 80%;
+  position: fixed;
+  border-radius: 8px;
 }
 
 .person-pic {
@@ -50,5 +58,9 @@ section {
 .name-profession-txt {
     @include flexBoxStandarts(flex,center,center);
     flex-direction: column;
+    @include size(134px,390px);
+    padding-top:19.5px;
+    margin-bottom: 80px;
     
 }
+

@@ -1,13 +1,14 @@
-@import './app/fonts.scss';
+@import "./app/fonts.scss";
 body {
+  background-color: black;
   margin: 0;
-  font-family: 'Quantico';
+  font-family: "Quantico";
 }
 
 // Variables
 
 $navigationBgColor: #b5e93b;
-$highlightFontColor: #B5E93B;
+$highlightFontColor: #b5e93b;
 
 //mixIn
 
@@ -20,8 +21,8 @@ $highlightFontColor: #B5E93B;
   width: $width;
 }
 
-@mixin flexBoxStandarts($df:flex,$ai,$jc) {
-    display: $df;
-    align-items: $ai ;
-    justify-content: $jc ;
+@mixin flexBoxStandarts($df: flex, $ai, $jc) {
+  display: $df;
+  align-items: $ai;
+  justify-content: $jc;
 }
