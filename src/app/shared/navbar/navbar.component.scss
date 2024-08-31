@@ -1,0 +1,18 @@
+@import "../../../styles.scss";
+
+header {
+  @include colorGradient(160.33deg, #b5e93b 50.78%, #547800 133.54%);
+  @include size(73px, 100%);
+  position: fixed;
+  top: 0;
+  >nav {
+    display: flex;
+    align-items:  center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+}
+
+.placetaker {
+    @include size(73px, 100%);
+}

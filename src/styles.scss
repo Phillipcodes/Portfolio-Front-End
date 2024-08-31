@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/fonts.scss';
+body {
+  margin: 0;
+  font-family: 'Quantico';
+}
+
+// Variables
+
+$navigationBgColor: #b5e93b;
+$highlightFontColor: #B5E93B;
+
+//mixIn
+
+@mixin colorGradient($deg, $c1, $c2) {
+  background: linear-gradient($deg, $c1, $c2); // Note the semicolon here
+}
+
+@mixin size($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin flexBoxStandarts($df:flex,$ai,$jc) {
+    display: $df;
+    align-items: $ai ;
+    justify-content: $jc ;
+}

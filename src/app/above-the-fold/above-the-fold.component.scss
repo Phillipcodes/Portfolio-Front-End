@@ -1,0 +1,54 @@
+@import "../../styles.scss";
+
+section {
+  color: white;
+  height: 100vh;
+  background-color: black;
+  h1,
+  h2,
+  h3 {
+    color: $highlightFontColor;
+    margin: 0;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+    color:#FFFDFD;
+  }
+}
+
+.shadowbox {
+  @include colorGradient(
+    170.9deg,
+    rgba(0, 0, 0, 0.5) -52.37%,
+    rgba(23, 22, 22, 0.5) 197.35%
+  );
+}
+
+.person-pic {
+  background-image: url("../../assets/person-pic/bewerbungsfoto_transperent_mirrored.png");
+  @include size(360px, 310px);
+  background-size: cover; /* Deckt den gesamten Container */
+  background-position: bottom; /* Zentriert das Bild im Container */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.front {
+  @include size(361px, 388px);
+  @include flexBoxStandarts(flex, center, center);
+}
+
+.name-profession-txt {
+    @include flexBoxStandarts(flex,center,center);
+    flex-direction: column;
+    
+}
