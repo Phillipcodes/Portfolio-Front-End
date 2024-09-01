@@ -1,0 +1,102 @@
+@import "../../styles.scss";
+
+header {
+  padding: 75px 39px 40px;
+}
+
+section {
+  @include flexBoxStandarts(flex,center,center)
+}
+
+.my-work-field {
+  background-color: rgba(181, 233, 59, 0.2);
+  border-radius: 30px;
+  width: 346px;
+  .header {
+    color: $highlightFontColor;
+    @include flexBoxStandarts(flex, center, flex-start);
+    padding: 21px 20px 0;
+    gap: 7px;
+  }
+}
+
+.work-list {
+  color: white;
+
+  h3 {
+    font-weight: 400;
+    font-size: 22px;
+    margin-bottom: 14px;
+    margin-top: 16px;
+  }
+  div {
+    display: flex;
+    gap: 5px;
+    padding-left: 13px;
+    .info-txt {
+      flex-direction: column;
+    }
+  }
+}
+.bullet {
+  align-items: baseline;
+}
+
+.picture-btn-line {
+  margin-top: 12px;
+  flex-direction: column;
+  gap: 32px !important;
+  img {
+    @include size(185px, 321px);
+    border-radius: 30px;
+  }
+  > div {
+    gap: 16px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+button {
+
+  border-radius: 30px;
+  @include size(43px, 122px);
+  margin-bottom: 51px;
+}
+
+#live-test-btn {
+  background-color: #b5e93b;
+  color: #4a4a4a;
+  &:hover {
+    background: linear-gradient(160.33deg, #B5E93B 50.78%, #547800 133.54%);
+    color: #252525;
+  }
+}
+
+#git-btn {
+  color: white;
+  background-color: #b5e93b00;
+  border: 1px solid #b5e93b;
+  &:hover {
+    background-color: #d3ed9733;
+  }
+}
+
+.show-me-less {
+  @include flexBoxStandarts(flex,center,center);
+  color: $highlightFontColor;
+  font-size: 14px;
+  text-decoration: underline;
+  gap: 4px;
+  margin-top: 7px;
+ }
+
+ .show-me {
+  @include flexBoxStandarts(flex,center,center);
+  color: $highlightFontColor;
+  font-size: 14px;
+  text-decoration: underline;
+  gap: 4px;
+  margin-top: 7px;
+  width: 78%;
+ }

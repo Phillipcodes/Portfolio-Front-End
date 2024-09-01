@@ -5,6 +5,7 @@ body {
   font-family: "Quantico";
 }
 
+
 // Variables
 
 $navigationBgColor: #b5e93b;
@@ -25,4 +26,12 @@ $highlightFontColor: #b5e93b;
   display: $df;
   align-items: $ai;
   justify-content: $jc;
+}
+
+button {
+  border-style: unset;
+  font-family: "Quantico";
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
 }

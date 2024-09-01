@@ -1,0 +1,70 @@
+@import "../../styles.scss";
+
+section {
+  color: white;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 21, 21, 1) 0%,
+    /* Startet, wo der erste Abschnitt endet */ rgba(0, 0, 0, 1) 100%
+  );
+  padding: 80px 26px;
+  p {
+    margin: 24px 0;
+  }
+}
+
+.icon-line {
+  @include flexBoxStandarts(flex, center, unset);
+  // flex-direction: column;
+  gap: 32px 85px;
+  flex-wrap: wrap;
+  padding: 40px 29px;
+  margin-bottom: 22px;
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 0%,
+    rgb(22 22 22 / 90%) 40%,
+    rgb(20 20 20 / 70%) 70%,
+    rgb(6 6 6 / 30%) 100%
+  );
+  div:hover {
+    transform: scale(1.2) rotateZ(20deg);
+    transition: ease-in-out 125ms;
+
+    img:hover {
+      filter: drop-shadow(0 0 15px #b5e93b);
+      transition: filter 455ms ease-out;
+    }
+  }
+  div {
+    @include size(51px, 46px);
+    p {
+      display: none;
+      margin: 0;
+    }
+    &:last-child p {
+      display: block;
+      color: white;
+      width: 120px;
+      margin-left: -50%;
+    }
+  }
+}
+
+span {
+ display: flex;
+  color: white;
+  padding: 0 24px;
+  margin-bottom: 40px;
+}
+button {
+    background-color: #b5e93b;
+    color: #4A4A4A;
+    border-radius: 30px;
+    @include size(43px,122px);
+    margin-bottom: 75px;
+}
+
+.btn-container {
+    @include flexBoxStandarts(flex,center,center)
+}

@@ -1,0 +1,51 @@
+<header><img src="./assets/img/mywork.png" alt="" /></header>
+
+<section>
+  <div [ngStyle]="{ 'max-height': isListOpen ? '861px' : '275px', 'overflow': 'hidden', 'transition': 'max-height 355ms ease-in-out' }" class="my-work-field">
+
+    @for(item of myWork; track $index) {
+    <div class="header">
+      <img [src]="item.number" alt="" />
+      <h3>{{item.project}}</h3>
+    </div>
+    <div class="work-list">
+      <div class="bullet">
+        <img src="../../assets/img/bulletpoint25.png" alt="" />
+        <div class="info-txt">
+          <h3>About the Project</h3>
+          <span
+            >{{item.about}}
+          </span>
+
+          <div [ngStyle]="isListOpen ? {'display': 'none'} : {'display': 'flex'}" (click)="toggleList()" class="show-me"><span>Show me more</span>
+            <img src="./assets/img/Polygon_down.png" alt=""></div>
+        </div>
+      </div>
+      <div class="bullet">
+        <img src="../../assets/img/bulletpoint25.png" alt="" />
+        <div class="info-txt">
+          <h3>Technologies I have used</h3>
+          <span>Angular, TypeScript, HTML, CSS, Firebase </span>
+        </div>
+      </div>
+      <div class="bullet">
+        <img src="../../assets/img/bulletpoint25.png" alt="" />
+        <div class="info-txt">
+          <h3>What I have learned</h3>
+          <span
+            >TOR my group-projects experience. Pretium arcu sed senectus felis
+            ac mauris. Dui eget dictum.Lorem ipsum dolor sit amet consectetur.
+            Posuere pretium arcu sed senectus felis ac mauris.
+          </span>
+        </div>
+      </div>
+      <div class="picture-btn-line">
+        <img src="./assets/img/join.JPG" alt="" />
+        <div><button id="git-btn">GitHub</button> <button id="live-test-btn">Live Test</button></div>
+      </div>
+    </div>
+  }
+  </div>
+</section>
+<div [ngStyle]="isListOpen ? {'display': 'flex'} : {'display': 'none'}" (click)="toggleList()" class="show-me-less"><span>Show me less</span>
+  <img src="./assets/img/polygon_2.png" alt=""></div>

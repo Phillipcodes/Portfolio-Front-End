@@ -1,1 +1,21 @@
-<p>skills works!</p>
+<section>
+ <img src="./assets/img/myskillset.png" alt="">
+  <p>
+    The IT landscape is continuously evolving, with new technologies and
+    methodologies. Staying motivated to expand my IT skills requires a strategic
+    approach, a curious mindset, and a commitment to lifelong learning.
+  </p>
+</section>
+<div class="icon-line">
+@for (icon of icons; track $index) {
+   <div>
+    <img [src]="icon.path" alt="">
+    <p>{{icon.name}}</p>
+   </div>
+   
+}
+</div>
+<span>I always try to expamd my current skill set and  I am happy to learn new technonogies, just tell me what else do you need.</span>
+<div class="btn-container">
+  <button>Let´s talk</button>
+</div>

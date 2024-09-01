@@ -1,19 +1,22 @@
 @import "../../styles.scss";
 
+
+  
+  
+
+
 div {
   padding: 0 26px;
   font-size: 16px;
-}
-
-h2 {
-  font-size: 32px;
-  font-weight: 700;
-  text-shadow: 1px 1px 0 #b5e93b, -1px -1px 0 #b5e93b, 1px -1px 0 #b5e93b,
-    -1px 1px 0 #b5e93b; /* Mehrere Schatten für eine dickere Outline */
-  color: black !important;
+  color: white;
 }
 
 .i-am-section {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0px,     /* Übergang beginnt direkt nach dem schwarzen Abschnitt */
+    rgba(22, 21, 21, 1) 100%);
+   
   h1 {
     font-size: 32px;
     font-weight: 700;
@@ -29,33 +32,34 @@ h2 {
   transition: transform 200ms ease-out, opacity 200ms ease-out;
 }
 .image-container {
-  position: relative; /* Um das überlagernde Bild zu positionieren */
-  @include size(95px, 128px); /* Fixierte Breite für den Container */
-  height: auto; /* Höhe wird automatisch berechnet */
+  position: relative;
+  @include size(95px, 128px);
+  height: auto;
 }
 
-/* Standardbildstil */
 .hover-image {
   width: 100%;
   height: auto;
   position: absolute;
   top: 0;
   left: 0;
-  transition: opacity 75ms ease-out; /* Animationseffekt */
+  transition: opacity 75ms ease-out;
 }
 
-/* Das Bild, das standardmäßig sichtbar ist */
 .hover-image.hover {
-  opacity: 0; /* Unsichtbar standardmäßig */
+  opacity: 0;
 }
 
-/* Hover-Effekt */
 .image-container:hover .hover {
-  opacity: 1; /* Macht das zweite Bild sichtbar */
+  opacity: 1;
+}
+
+.image-container:hover + .txt-with-icon {
+  color: $highlightFontColor !important;
 }
 
 .image-container:hover .normal {
-  opacity: 0; /* Macht das erste Bild unsichtbar */
+  opacity: 0;
 }
 
 .placetaker {
@@ -63,10 +67,17 @@ h2 {
 }
 
 button {
-@include size(43px,135px);
-    border-style: unset;
-    background-color: $navigationBgColor;
-    border-radius: 30px;
- 
+  @include size(43px, 135px);
+  border-style: unset;
+  background-color: $navigationBgColor;
+  border-radius: 30px;
+  color: #4a4a4a;
+  margin-bottom: 80px;
+}
 
+.txt-with-icon {
+  margin-top: 20px;
+  &hover {
+    color: $highlightFontColor;
+  }
 }

@@ -5,11 +5,13 @@ header {
   @include size(73px, 100%);
   position: fixed;
   top: 0;
+  z-index: 10;
   >nav {
     display: flex;
     align-items:  center;
     justify-content: space-between;
     padding: 10px 20px;
+    
   }
 }
 

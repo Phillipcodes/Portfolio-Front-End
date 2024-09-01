@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component,OnInit } from '@angular/core';
+import { IconService } from '../interfaces/icon-service'
+import { AppComponent } from '../app.component';
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -9,4 +10,12 @@ import { Component } from '@angular/core';
 })
 export class SkillsComponent {
 
+  icons:any[]=[]
+
+constructor(private iconService:IconService) {
+
+}
+ngOnInit(): void {
+  this.icons = this.iconService.getJson() ;
+}
 }

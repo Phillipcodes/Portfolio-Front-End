@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SkillIconsComponent } from './skill-icons.component';
+import { MyWorkComponent } from './my-work.component';
 
-describe('SkillIconsComponent', () => {
-  let component: SkillIconsComponent;
-  let fixture: ComponentFixture<SkillIconsComponent>;
+describe('MyWorkComponent', () => {
+  let component: MyWorkComponent;
+  let fixture: ComponentFixture<MyWorkComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SkillIconsComponent]
+      imports: [MyWorkComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(SkillIconsComponent);
+    fixture = TestBed.createComponent(MyWorkComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

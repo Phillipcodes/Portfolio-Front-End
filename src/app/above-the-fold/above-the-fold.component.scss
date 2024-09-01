@@ -1,12 +1,12 @@
 @import "../../styles.scss";
 
-app-above-the-fold {
-    height: 100vh;
-}
+
 
 section {
+  display: flex;
+  flex-direction: column;
   color: white;
-
+  height: 100vh;
   background-color: black;
   h1,
   h2,
@@ -41,7 +41,7 @@ section {
 
 .person-pic {
   background-image: url("../../assets/person-pic/bewerbungsfoto_transperent_mirrored.png");
-  @include size(360px, 310px);
+  @include size(400px, 310px);
   background-size: cover; /* Deckt den gesamten Container */
   background-position: bottom; /* Zentriert das Bild im Container */
   background-repeat: no-repeat;
@@ -51,14 +51,17 @@ section {
 }
 
 .front {
-  @include size(361px, 388px);
+  @include size(361px, 100%);
   @include flexBoxStandarts(flex, center, center);
+  flex: 1;
+  display: flex;
+  flex-direction: column
 }
 
 .name-profession-txt {
     @include flexBoxStandarts(flex,center,center);
     flex-direction: column;
-    @include size(134px,390px);
+    @include size(134px,100%);
     padding-top:19.5px;
     margin-bottom: 80px;
     
