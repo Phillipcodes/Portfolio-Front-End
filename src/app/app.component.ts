@@ -8,12 +8,13 @@ import { WhyMeComponent } from "./why-me/why-me.component";
 import { SkillsComponent } from './skills/skills.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { TeamPlayerComponent } from './team-player/team-player.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, AboveTheFoldComponent, WhyMeComponent,SkillsComponent,MyWorkComponent,TeamPlayerComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, AboveTheFoldComponent, WhyMeComponent,SkillsComponent,MyWorkComponent,TeamPlayerComponent,ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

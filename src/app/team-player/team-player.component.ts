@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { HostListener } from '@angular/core';
+import { Component,ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-team-player',
@@ -9,11 +9,11 @@ import { HostListener } from '@angular/core';
   templateUrl: './team-player.component.html',
   styleUrl: './team-player.component.scss',
 })
-export class TeamPlayerComponent {
-
-  carousel = ['../../assets/img/carousel-1.png','../../assets/img/carousel-2.png','../../assets/img/carousel-3.png']
+export class TeamPlayerComponent implements AfterViewInit {
+  @ViewChild('refContainer') refContainer!: ElementRef;
+  carousel = ['./assets/img/carousel-1.png','./assets/img/carousel-2.png','./assets/img/carousel-3.png']
   currentCarousel = this.carousel[0]
-  references = [
+  referencesTxt = [
     {
       name: 'placeholder',
       proj: 'ell pollo',
@@ -31,25 +31,26 @@ export class TeamPlayerComponent {
     },
   ];
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event): void {
-    const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
+  ngAfterViewInit() {
+    
+    const container = this.refContainer.nativeElement;
+    container.addEventListener('scroll', this.onScroll.bind(this));
+  }
 
-    // Beispiel für das Arbeiten mit festen Scroll-Werten
-    if (scrollLeft > 200) {
-      this.currentCarousel = this.carousel[1];
-    } else if (scrollLeft > 400) {
+
+  onScroll(event: Event): void {
+    const container = this.refContainer.nativeElement;
+    const scrollLeft = container.scrollLeft; 
+
+    
+    if (scrollLeft > 650) { 
       this.currentCarousel = this.carousel[2];
+    } else if (scrollLeft > 300) {
+      this.currentCarousel = this.carousel[1];
     } else {
       this.currentCarousel = this.carousel[0];
     }
 
-    // Ausgabe zum Debuggen
     console.log(`Scroll position: ${scrollLeft}px`);
   }
-
-
-
 }
-
-

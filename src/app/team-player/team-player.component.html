@@ -4,13 +4,13 @@
 <span>Here what my colleagues said about me</span>
 </header>
 <div #refContainer class="ref-container">
-@for(ref of references; track $index) {
-<div class="references" (scroll)="onScroll($event)">
+@for(ref of referencesTxt; track $index) {
+<div class="references" >
     <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi modi maiores amet voluptas doloribus mol</span>
     <div class="seperator"></div>
     <div>
         <h3>Noah welle</h3>
-        <span>Project pollo loco</span>
+        <span class="project">Project pollo loco</span>
     </div>
 </div>
 }

@@ -20,8 +20,8 @@ export class WorkService {
           tec: 'JavaScript,Firebase,HTML,CSS,Git',
           learned:
             'I learned a variety of skills. My JavaScript knowledge was tested in combination with Firebase, which gave me a whole new understanding of how programming works. Additionally, I learned to organize myself within a team and take responsibility for deadlines.',
-          path: '../../assets/img/join.png',
-          number: '../../assets/img/1.png',
+          path: './assets/img/join.png',
+          number: './assets/img/1.png',
           project: 'Project Join'
         },
         {
@@ -30,8 +30,8 @@ export class WorkService {
           tec: 'JavaScript, Angular, CSS, HTML, Node.js',
           learned:
             'Verwendung von Angular für die Entwicklung von Single-Page-Anwendungen, Erstellen von RESTful APIs mit Node.js, Erweiterte Kenntnisse in CSS für die Gestaltung responsiver Layouts, Arbeiten mit Datenbanken und ORM-Tools',
-          path: '../../assets/img/elpollo.png',
-          number: '../../assets/img/2.png',
+          path: './assets/img/elpollo.png',
+          number: './assets/img/2.png',
           project: 'Project Join'
         },
       ];

@@ -18,3 +18,7 @@ header {
 .placetaker {
     @include size(73px, 100%);
 }
+
+.ps-logo {
+  @include size(64px,64px)
+}
