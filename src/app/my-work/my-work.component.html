@@ -1,51 +1,82 @@
+
 <header><img src="./assets/img/mywork.png" alt="" /></header>
 
-<section>
-  <div [ngStyle]="{ 'max-height': isListOpen ? '861px' : '275px', 'overflow': 'hidden', 'transition': 'max-height 355ms ease-in-out' }" class="my-work-field">
-
-    @for(item of myWork; track $index) {
+@for(item of myWork; track item; let i = $index) {
+<section
+  [ngStyle]="
+    isListOpen[i] ? { 'margin-bottom': '0' } : { 'margin-bottom': '40px' }
+  "
+>
+  <div
+    [ngStyle]="{
+      'max-height': isListOpen[i] ? '861px' : '275px',
+      overflow: 'hidden',
+      transition: 'max-height 355ms ease-in-out'
+    }"
+    class="my-work-field"
+  >
     <div class="header">
       <img [src]="item.number" alt="" />
-      <h3>{{item.project}}</h3>
+      <h3>{{ item.project }}</h3>
     </div>
+
     <div class="work-list">
       <div class="bullet">
         <img src="../../assets/img/bulletpoint25.png" alt="" />
         <div class="info-txt">
           <h3>About the Project</h3>
-          <span
-            >{{item.about}}
-          </span>
+          <span>{{ item.about }} </span>
 
-          <div [ngStyle]="isListOpen ? {'display': 'none'} : {'display': 'flex'}" (click)="toggleList()" class="show-me"><span>Show me more</span>
-            <img src="./assets/img/Polygon_down.png" alt=""></div>
+          <div
+            [ngStyle]="
+              isListOpen[i] ? { display: 'none' } : { display: 'flex' }
+            "
+            (click)="toggleList(i)"
+            class="show-me"
+          >
+            <span>Show me more</span>
+            <img src="./assets/img/Polygon_down.png" alt="" />
+          </div>
         </div>
       </div>
+
       <div class="bullet">
         <img src="../../assets/img/bulletpoint25.png" alt="" />
         <div class="info-txt">
           <h3>Technologies I have used</h3>
-          <span>Angular, TypeScript, HTML, CSS, Firebase </span>
+          <span>{{ item.tec }} </span>
         </div>
       </div>
       <div class="bullet">
         <img src="../../assets/img/bulletpoint25.png" alt="" />
         <div class="info-txt">
           <h3>What I have learned</h3>
-          <span
-            >TOR my group-projects experience. Pretium arcu sed senectus felis
-            ac mauris. Dui eget dictum.Lorem ipsum dolor sit amet consectetur.
-            Posuere pretium arcu sed senectus felis ac mauris.
-          </span>
+          <span>{{ item.learned }} </span>
         </div>
       </div>
       <div class="picture-btn-line">
-        <img src="./assets/img/join.JPG" alt="" />
-        <div><button id="git-btn">GitHub</button> <button id="live-test-btn">Live Test</button></div>
+        <img [src]="item.path" alt="" />
+        <div>
+          <button id="git-btn">GitHub</button>
+          <button id="live-test-btn">Live Test</button>
+        </div>
       </div>
     </div>
-  }
   </div>
 </section>
-<div [ngStyle]="isListOpen ? {'display': 'flex'} : {'display': 'none'}" (click)="toggleList()" class="show-me-less"><span>Show me less</span>
-  <img src="./assets/img/polygon_2.png" alt=""></div>
+
+<div
+  [ngStyle]="isListOpen[i] ? { display: 'flex' } : { display: 'none' }"
+  (click)="toggleList(i)"
+  class="show-me-less"
+>
+  <span>Show me less</span> <img src="./assets/img/polygon_2.png" alt="" />
+</div>
+}
+<div class="on-going">
+  <div class="on-going-header"><img src="./assets/img/3.png" alt=""> <h3>On going project</h3></div>
+  
+ <span>I am currently working on developing an online shop for pet foods.
+  This is for me  both exciting and challenging. In my work the key to success lies in a good planning and execution.</span>
+</div>
+

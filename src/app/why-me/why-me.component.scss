@@ -1,22 +1,13 @@
 @import "../../styles.scss";
 
-
-  
-  
-
-
 div {
   padding: 0 26px;
   font-size: 16px;
-  color: white;
 }
 
+
+
 .i-am-section {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0px,     /* Übergang beginnt direkt nach dem schwarzen Abschnitt */
-    rgba(22, 21, 21, 1) 100%);
-   
   h1 {
     font-size: 32px;
     font-weight: 700;

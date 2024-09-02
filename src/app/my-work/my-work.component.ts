@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { WorkService } from '../interfaces/work-service';
+import { WorkItem, WorkService } from '../interfaces/work-service';
 
 @Component({
   selector: 'app-my-work',
@@ -10,17 +10,17 @@ import { WorkService } from '../interfaces/work-service';
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkComponent {
-  isListOpen: boolean = false;
+  isListOpen: boolean[] = [false,false];
 
-  myWork:any[]=[]
+  myWork:WorkItem[]=[]
 
 
   constructor(private workService:WorkService) {
 
   }
 
-  toggleList() {
-    this.isListOpen = !this.isListOpen;
+  toggleList(index:number) {
+    this.isListOpen[index] = !this.isListOpen[index];
   }
 
   ngOnInit(): void {

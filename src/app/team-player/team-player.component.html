@@ -1,0 +1,19 @@
+<section>
+<header>
+<h3>Need a teamplayer?</h3>
+<span>Here what my colleagues said about me</span>
+</header>
+<div #refContainer class="ref-container">
+@for(ref of references; track $index) {
+<div class="references" (scroll)="onScroll($event)">
+    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi modi maiores amet voluptas doloribus mol</span>
+    <div class="seperator"></div>
+    <div>
+        <h3>Noah welle</h3>
+        <span>Project pollo loco</span>
+    </div>
+</div>
+}
+</div>
+<div class="carousel"><img [src]="currentCarousel" alt=""></div>
+</section>
