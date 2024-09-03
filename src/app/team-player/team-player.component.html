@@ -6,11 +6,11 @@
 <div #refContainer class="ref-container">
 @for(ref of referencesTxt; track $index) {
 <div class="references" >
-    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi modi maiores amet voluptas doloribus mol</span>
+    <span>{{ref.txt}}</span>
     <div class="seperator"></div>
     <div>
-        <h3>Noah welle</h3>
-        <span class="project">Project pollo loco</span>
+        <h3>{{ref.name}}</h3>
+        <span class="project">{{ref.proj}}</span>
     </div>
 </div>
 }

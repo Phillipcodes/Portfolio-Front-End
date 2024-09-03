@@ -12,22 +12,81 @@
     >
   </div>
   <div class="contact-info">
-    <div><img src="./assets/icons/mail.png" alt=""> <span> E-mail:Phillip&#64;gmail.com</span></div>
-    <div><img src="./assets/icons/phone.png" alt=""><span>Tel:01734914671</span></div>
+    <div class="hover-effect-mail">
+      <img  src="./assets/icons/mail.png" alt="" />
+      <a href="mailto:example@example.com">E-mail:Phillip&#64;gmail.com</a>
+    </div>
+    <div class="hover-effect-mail">
+      <img src="./assets/icons/phone.png" alt="" /><a href="tel:">Tel:01734914671</a>
+    </div>
   </div>
-  <form>
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" >
     <label for="name"></label>
-    <input type="text" id="name" placeholder="Your name" name="name">
+    <input
+      required
+      [(ngModel)]="contactData.name"
+      autocomplete="off"
+      type="text"
+      id="name"
+      [placeholder]="nameInput.invalid && nameInput.touched ? 'Name is required' : 'Your name'"
+      [ngClass]="{'invalid-input': nameInput.invalid && nameInput.touched}"
+      name="name"
+      #nameInput="ngModel"
+      minlength="3"
+      (input)="validateName($event.target)"
+    
+    />
     <label for="email"></label>
-    <input type="email" id="email" placeholder="Your Email" name="email">
-    <textarea name="message" id="message" placeholder="Your message"></textarea>
+    <input
+    required
+    [(ngModel)]="contactData.email"
+      autocomplete="off"
+      type="email"
+      id="email"
+      placeholder="Your Email"
+      name="email"
+      pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+      [placeholder]="emailInput.invalid && emailInput.touched ? 'Email is required (example@web.com)' : 'Your email'"
+      [ngClass]="{'invalid-input': emailInput.invalid && emailInput.touched}"
+      #emailInput="ngModel"
+    />
+    <textarea
+    required
+    [(ngModel)]="contactData.message"
+      autocomplete="off"
+      name="message"
+      id="message"
+      placeholder="Your message"
+      [placeholder]="messageInput.invalid && messageInput.touched ? 'Message is required' : 'Your message'"
+      [ngClass]="{'invalid-input': messageInput.invalid && messageInput.touched}"
+      #messageInput="ngModel"
+    ></textarea>
     <div class="policy">
-        <img src="./assets/icons/checkbox_default.png" alt="">
-        <span>I've read the privacy policy and agree to the processing of my data as outlined.</span>
+      <div > 
+        <div class="checkbox-container">
+      <img class="hover-image normal" (click)="policyTrue()" [src]="imageSrc" alt="" />
+      <div class="placetaker"></div>
+      @if(imageSrc == '../../assets/icons/checkbox_default.png') {
+        <img class="hover-image hover" (click)="policyTrue()" src="./assets/icons/checkbox-default-hoverpng.png" alt="" />
+      }@else if(imageSrc == '../../assets/icons/checkedBox.png') {
+        <img class="hover-image hover hover-size" (click)="policyTrue()" src="../../assets/icons/checkedBox.png" alt="" />
+      }
+      @else {
+        <img class="hover-image hover hover-size" (click)="policyTrue()" src="./assets/icons/errorBox.png" alt="" />
+      }
     </div>
-    <div class="btn-container"> 
-        <input class="submit-btn" type="submit" name="" value="submit">
+      <span
+        >I've read the privacy policy and agree to the processing of my data as
+        outlined.</span
+      >
     </div>
-   
+  
+      <span class="d-none" [ngClass]="{'active-error':errorTxt }">Please accept the privacy policy.</span>
+    
+    </div>
+    
+    <div class="btn-container">
+      <input class="submit-btn" type="submit" name="" value="submit" [ngClass]="{'active-submit-btn': messageInput.valid && emailInput.valid && nameInput.valid && privacyPolicy}"  />
+    </div>
   </form>
 </section>

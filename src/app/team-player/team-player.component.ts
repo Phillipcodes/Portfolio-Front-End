@@ -15,19 +15,19 @@ export class TeamPlayerComponent implements AfterViewInit {
   currentCarousel = this.carousel[0]
   referencesTxt = [
     {
-      name: 'placeholder',
-      proj: 'ell pollo',
-      ref: 'nice mate lovely to work with even in hard crunch times a absolut monster',
+      name: 'Andre Veltens',
+      proj: 'Project Join',
+      txt: 'Phillip stood out as a reliable and motivated partner when working on a project. Thanks to our determined and efficient collaboration, we were able to achieve our project goals in a short space of time.',
     },
     {
       name: 'placeholder2',
       proj: 'ell pollo2',
-      ref: 'nice mate lovely to work with even in hard crunch times a absolut monster2',
+      txt: 'nice mate lovely to work with even in hard crunch times a absolut monster2',
     },
     {
       name: 'placeholder3',
       proj: 'ell pollo3',
-      ref: 'nice mate lovely to work with even in hard crunch times a absolut monster3',
+      txt: 'nice mate lovely to work with even in hard crunch times a absolut monster3',
     },
   ];
 
