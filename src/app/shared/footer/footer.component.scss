@@ -21,6 +21,13 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-around;
+        span {
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+        }
+        }
     }
 }
 

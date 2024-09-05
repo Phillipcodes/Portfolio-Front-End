@@ -11,13 +11,14 @@ import { TeamPlayerComponent } from './team-player/team-player.component';
 import { ContactComponent } from './contact/contact.component';
 import { PreFooterComponent } from './pre-footer/pre-footer.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, NavbarComponent, AboveTheFoldComponent, WhyMeComponent,SkillsComponent,MyWorkComponent,TeamPlayerComponent,ContactComponent,PreFooterComponent,FooterComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, AboveTheFoldComponent, WhyMeComponent,SkillsComponent,MyWorkComponent,TeamPlayerComponent,ContactComponent,PreFooterComponent,FooterComponent,ImprintComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

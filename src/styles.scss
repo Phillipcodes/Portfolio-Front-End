@@ -1,6 +1,8 @@
 @import "./app/fonts.scss";
 
-
+*{
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
