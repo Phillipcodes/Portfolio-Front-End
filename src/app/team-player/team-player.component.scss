@@ -26,20 +26,17 @@ gap: 8px;
     height:128px;
     margin-right: 14px;
   }
-  span:not(:first-of-type) {
-    font-size: 14px;
+  span {
+    font-size: 13px;
     max-width: 174px;
    
   }
-  &:first-child span {
-    font-size: 13px;
-    max-width: 174px;
-  }
+
   h3 {
     font-size: 22px;
     color: $highlightFontColor;
     margin: 0;
-    inline-size: 115px;
+    max-width: 120px
   }
  
 }

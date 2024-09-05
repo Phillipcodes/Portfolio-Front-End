@@ -24,6 +24,9 @@ h4 {
       margin-left: 8px;
     }
   }
+  img {
+    cursor: pointer;
+  }
 }
 
 form {
@@ -90,6 +93,10 @@ textarea:focus {
   @include size(43px, 94px);
   border-radius: 30px;
   color: #4a4a4a;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 .btn-container {
   display: flex;
@@ -129,6 +136,7 @@ textarea:focus {
 
 .checkbox-container {
   position: relative;
+  cursor: pointer;
 }
 
 .hover-image {

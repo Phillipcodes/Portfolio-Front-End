@@ -66,10 +66,10 @@
         <div class="checkbox-container">
       <img class="hover-image normal" (click)="policyTrue()" [src]="imageSrc" alt="" />
       <div class="placetaker"></div>
-      @if(imageSrc == '../../assets/icons/checkbox_default.png') {
+      @if(imageSrc == './assets/icons/checkbox_default.png') {
         <img class="hover-image hover" (click)="policyTrue()" src="./assets/icons/checkbox-default-hoverpng.png" alt="" />
-      }@else if(imageSrc == '../../assets/icons/checkedBox.png') {
-        <img class="hover-image hover hover-size" (click)="policyTrue()" src="../../assets/icons/checkedBox.png" alt="" />
+      }@else if(imageSrc == './assets/icons/checkedBox.png') {
+        <img class="hover-image hover hover-size" (click)="policyTrue()" src="./assets/icons/checkedBox.png" alt="" />
       }
       @else {
         <img class="hover-image hover hover-size" (click)="policyTrue()" src="./assets/icons/errorBox.png" alt="" />

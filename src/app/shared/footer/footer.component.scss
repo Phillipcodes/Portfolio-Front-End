@@ -1,0 +1,26 @@
+@import '../../../styles.scss';
+
+footer {
+    @include flexBoxStandarts(flex,center,center);
+    flex-direction: column;
+    background: linear-gradient(160.33deg, #B5E93B 50.78%, #547800 133.54%);
+   width: 100%;
+   color: #4A4A4A;
+   gap: 4px;
+   
+   img {
+    @include size(80px,80px)
+   }
+}
+
+.notice-block {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    >div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+

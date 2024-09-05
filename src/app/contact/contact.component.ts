@@ -10,7 +10,7 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  imageSrc = '../../assets/icons/checkbox_default.png';
+  imageSrc = './assets/icons/checkbox_default.png';
   privacyPolicy = false;
   errorTxt = false;
   formSubmitted = false;
@@ -30,10 +30,13 @@ export class ContactComponent {
     debugger;
     if (ngForm.valid && ngForm.submitted && this.privacyPolicy == true) {
       console.log(this.contactData);
-    } else if (this.privacyPolicy == false) {
-      this.imageSrc = '../../assets/icons/errorBox.png';
+    } else if (this.privacyPolicy == false ) {
+      this.imageSrc = './assets/icons/errorBox.png';
       this.errorTxt = true;
       this.markFormFieldAsTouched(ngForm);
+    }
+    else if (this.privacyPolicy && ngForm.invalid) {
+        this.markFormFieldAsTouched(ngForm);
     }
   }
 
@@ -42,23 +45,18 @@ export class ContactComponent {
   }
 
   policyTrue() {
-    debugger;
     this.privacyPolicy = true;
     if (
-      (this.privacyPolicy &&
-        this.imageSrc == '../../assets/icons/errorBox.png') ||
-      this.imageSrc == '../../assets/icons/checkbox_default.png'
-    ) {
-      this.imageSrc = '../../assets/icons/checkedBox.png';
+      (this.privacyPolicy && this.imageSrc == './assets/icons/errorBox.png') ||this.imageSrc == './assets/icons/checkbox_default.png') {
+      this.imageSrc = './assets/icons/checkedBox.png';
       this.errorTxt = false;
     } else if (
-      this.privacyPolicy &&
-      this.imageSrc == '../../assets/icons/checkedBox.png'
+      this.privacyPolicy && this.imageSrc == './assets/icons/checkedBox.png'
     ) {
-      this.imageSrc = '../../assets/icons/checkbox_default.png';
+      this.imageSrc = './assets/icons/checkbox_default.png';
       this.privacyPolicy = false;
     } else {
-      this.imageSrc = '../../assets/icons/errorBox.png';
+      this.imageSrc = './assets/icons/errorBox.png';
     }
-  }
-}
+  }};
+
