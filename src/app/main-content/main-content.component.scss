@@ -1,0 +1,18 @@
+@import '../../media-query.scss';
+
+.bg-g {
+    cursor: default;
+    @include desktopMode {
+        display: flex;
+        
+        overflow-x: auto;
+    }
+}
+
+
+// .fixed {
+//     @include desktopMode {
+//         position: fixed;
+//     }
+   
+// }

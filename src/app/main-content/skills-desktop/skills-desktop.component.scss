@@ -1,0 +1,64 @@
+@import "../../../styles.scss";
+@import "../../../media-query.scss";
+
+section {
+  margin-left: 104px;
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+}
+
+.skill-container {
+  position: relative;
+  min-width: 860px;
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px 42px;
+    max-width: 720px;
+    margin-top: 33px;
+    margin-bottom: 80px;
+
+    img:hover {
+      filter: drop-shadow(0 0 15px #b5e93b);
+      transition: filter 355ms ease-out;
+    }
+
+    div:hover {
+      transform: scale(1.2) rotateZ(20deg);
+      transition: ease-in-out 125ms;
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      @include size(73px, 68px);
+      > span {
+        inline-size: 100px;
+      }
+    }
+  }
+}
+
+.headline {
+  margin-right: 43px;
+  margin-bottom: 61px;
+}
+
+span {
+  font-size: 18px;
+}
+
+.place-absolut {
+  position: absolute;
+  right: 95px;
+  top: 230px;
+  inline-size: 215px;
+}
+
+.arrow-right {
+  height: 55%;
+  cursor: pointer;
+}

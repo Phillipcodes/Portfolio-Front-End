@@ -1,1 +1,14 @@
-<p>main-content works!</p>
+
+<div class="bg-g">
+<app-navbar [isDesktop]="isDesktop"></app-navbar>
+<app-above-the-fold id="main" [isDesktop]="isDesktop"></app-above-the-fold>
+<app-why-me [isDesktop]="isDesktop"></app-why-me>
+<app-skills *ngIf="isMobile"></app-skills>
+<app-skills-desktop *ngIf="isDesktop"></app-skills-desktop>
+<app-my-work *ngIf="isMobile"></app-my-work>
+<app-my-work-desktop *ngIf="isDesktop"></app-my-work-desktop>
+<app-team-player *ngIf="isMobile"></app-team-player>
+<app-contact *ngIf="isMobile"></app-contact>
+<app-pre-footer *ngIf="isMobile"></app-pre-footer>
+</div>
+

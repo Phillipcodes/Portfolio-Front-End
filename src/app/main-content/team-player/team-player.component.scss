@@ -1,0 +1,59 @@
+@import "../../../styles.scss";
+
+
+
+
+header {
+  h3 {
+    color: $highlightFontColor;
+    font-size: 22px;
+  }
+  padding: 60px 26px 0 26px;
+  margin-bottom: 40px;
+}
+
+.references {
+  border: solid 1px #d3ed97;
+  border-radius: 30px;
+  min-height: 176px;
+  min-width: 370px;
+ 
+@include flexBoxStandarts(flex,center,center);
+gap: 8px;
+  
+  .seperator {
+    background-color: #D3ED97;
+    width: 1px;
+    height:128px;
+    margin-right: 14px;
+  }
+  span {
+    font-size: 13px;
+    max-width: 174px;
+   
+  }
+
+  h3 {
+    font-size: 22px;
+    color: $highlightFontColor;
+    margin: 0;
+    max-width: 120px
+  }
+ 
+}
+
+.carousel {
+  @include flexBoxStandarts(flex,center,center);
+  margin-top: 18px;
+  margin-bottom: 80px;
+}
+
+.ref-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+}
+
+.project {
+  color: #D3ED97;
+}

@@ -1,0 +1,40 @@
+@import "../../../styles.scss";
+
+
+.arrow-container {
+    @include flexBoxStandarts(flex,center,center);
+    margin-top: 54px;
+    position: relative;
+  margin-bottom: 60px;
+  cursor: pointer;
+   
+}
+
+.hover-image {
+    position: absolute;
+    bottom: 0;
+  transition:  75ms ease-out;
+  &:hover {
+    filter: drop-shadow(0px 0px 10px #B5E93B);
+  }
+}
+
+
+
+.placetaker {
+   height: 45px;
+}
+
+
+.link-line {
+  @include flexBoxStandarts(flex,center ,center);
+  gap: 24px;
+  padding-bottom: 44px;
+  img {
+    cursor: pointer;
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(76%) sepia(89%) saturate(363%) hue-rotate(24deg) brightness(99%) contrast(93%);
+    }
+  }
+}
+

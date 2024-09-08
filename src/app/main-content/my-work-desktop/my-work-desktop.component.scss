@@ -1,0 +1,112 @@
+@import "../../../styles.scss";
+@import "../../../media-query.scss";
+
+.work-container {
+  background-color: hsla(78, 80%, 57%, 0.2);
+  max-width: 919px;
+  border-radius: 30px;
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  min-width: 2000px;
+  gap: 40px;
+  align-items: center;
+}
+
+.main-headline {
+    height: 55%;
+    margin-left: 104px;
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 37px;
+  margin-top: 10px;
+  > h1 {
+    font-size: 54px;
+    color: $highlightFontColor;
+    margin: 0;
+  }
+  > img {
+    height: 60px;
+  }
+}
+
+.sub-headline {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  > img {
+    @include size(13px, 13px);
+  }
+  > h3 {
+    color: #fffdfd;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+}
+
+.main-container {
+  padding: 0px 47px 0 60px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.main-content {
+    display: flex;
+  > span {
+    width: 366px;
+    display: block;
+    margin-left: 32px;
+  }
+}
+
+span {
+  font-size: 18px;
+}
+
+.word-space {
+  word-spacing: 8px;
+}
+
+.width {
+  width: unset !important;
+}
+
+.btn-img-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 27px;
+    >img {
+        @include size(203px,337px);
+        border-radius: 30px;
+    }
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.git-btn {
+    @include size(43px,106px);
+    border-radius: 30px;
+}
+.live-test-btn {
+    @include size(43px,118px);
+    border-radius: 30px;
+}
+
+.txt-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

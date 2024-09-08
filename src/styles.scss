@@ -1,6 +1,7 @@
 @import "./app/fonts.scss";
+@import "./media-query.scss";
 
-*{
+* {
   scroll-behavior: smooth;
 }
 
@@ -8,6 +9,27 @@ body {
   margin: 0;
   font-family: "Quantico";
   color: #fffdfd;
+  background: linear-gradient(
+    179.85deg,
+    #000000 9.26%,
+    #1a1a1a 19.21%,
+    #181818 24.73%,
+    #070707 40.17%,
+    #101010 55.4%,
+    #101010 94.49%
+  );
+
+  @include desktopMode {
+    // background: linear-gradient(45deg, #000000 15%, #1A1A1A 25%, #0B0A0A 39%, #1e1e1e 55%, #101010 76%, #000000 90%);
+    background: linear-gradient(
+      82deg,
+      #000 0%,
+      #000 14%,
+      #2b2828 58%,
+      #141414 76%,
+      #000 100%
+    );
+  }
 }
 
 // Variables
@@ -38,4 +60,23 @@ button {
   font-size: 14px;
   font-weight: 400;
   cursor: pointer;
+}
+
+
+.live-test-btn {
+  background-color: #b5e93b;
+  color: #4a4a4a;
+  &:hover {
+    background: linear-gradient(160.33deg, #B5E93B 50.78%, #547800 133.54%);
+    color: #252525;
+  }
+}
+
+.git-btn {
+  color: white;
+  background-color: #b5e93b00;
+  border: 1px solid #b5e93b;
+  &:hover {
+    background-color: #d3ed9733;
+  }
 }

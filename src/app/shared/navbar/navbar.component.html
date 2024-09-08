@@ -1,7 +1,22 @@
 <header>
   <nav>
-    <div ><img class="ps-logo" src="./assets/icons/personal-logo.png" alt=""></div>
-    <div><img src="./assets/img/burger_menu.png" alt=""></div>
+    <div>
+      <img class="ps-logo" src="./assets/icons/personal-logo.png" alt="" />
+    </div>
   </nav>
+  <div *ngIf="isDesktop" class="navigation-line">
+    <img (click)="activeNav(0)" [src]="currentImg[0]" alt=""><img (click)="activeNav(1)" [src]="currentImg[1]" alt=""><img (click)="activeNav(2)" [src]="currentImg[2]" alt=""><img (click)="activeNav(3)" [src]="currentImg[3]" alt="">
+  </div>
 </header>
-<div class="placetaker"></div>
+
+<div
+  id="nav-icon1"
+  [ngClass]="{ open: this.isAnimation }"
+  (click)="toggleMenu()"
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+<app-burger-menu [ngClass]="{ 'd-none': menuClosedAtStart }"></app-burger-menu>
+

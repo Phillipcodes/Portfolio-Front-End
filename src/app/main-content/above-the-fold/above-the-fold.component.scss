@@ -1,0 +1,143 @@
+@import "../../../styles.scss";
+@import '../../../media-query.scss';
+
+// :host {
+//  background: linear-gradient(45deg, #0e0d0d 75%, #181818 90%, #1a1a1a 100%);
+// }
+
+
+
+section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  h1,
+  h2,
+  h3 {
+    color: $highlightFontColor;
+    margin: 0;
+  }
+  h1 {
+    font-size: 48px;
+    font-weight: 400;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 18px;
+    color:#FFFDFD;
+  }
+  @include desktopMode {
+    width: 100vw;
+    height: unset;
+    // background-color: black; // maybe :host  background: linear-gradient(270deg, #000000 11.41%, #181818 22.29%, #0a0a0a 37.32%, #181818 58.54%, #0B0A0A 70.03%); 
+  }
+}
+
+.shadowbox {
+  @include colorGradient(
+    170.9deg,
+    rgba(0, 0, 0, 0.5) -52.37%,
+    rgba(23, 22, 22, 0.5) 197.35%
+  );
+  @include size (29px,100%);
+  opacity: 80%;
+  position: fixed;
+  border-radius: 8px;
+  top:73px;
+  @include desktopMode {
+    display: none;
+  }
+}
+
+.person-pic {
+  background-image: url("../../../assets/person-pic/bewerbungsfoto_transperent_mirrored.png");
+  @include size(400px, 310px);
+  background-position: bottom; /* Zentriert das Bild im Container */
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  @include mobile360px {
+    width: 303px;
+  }
+  @include desktopMode {
+    @include size(100vh,870px);
+    background-size: 75% 95%;
+  }
+}
+
+.front {
+  @include size(361px, 100%);
+  @include flexBoxStandarts(flex, center, center);
+  flex: 1;
+  flex-direction: column;
+  @include desktopMode {
+    flex-direction: unset;
+    align-items: flex-start
+  }
+  
+}
+
+.name-profession-txt {
+    @include flexBoxStandarts(flex,center,center);
+    flex-direction: column;
+    @include size(134px,100%);
+    padding-top:19.5px;
+    margin-bottom: 80px;
+    @include desktopMode {
+      display: none;
+    }
+    
+}
+
+.arrow {
+  padding-top: 348px;
+  cursor: pointer;
+
+}
+
+.wrapper {
+  display: flex;
+}
+
+.seperator {
+  width: 2px;
+  height: 22px;
+  background: #FFFDFD;
+
+  
+}
+
+.links {
+  @include flexBoxStandarts(flex,center,flex-end);
+  gap: 16px;
+  margin-top: 35px;
+  position: fixed;
+    left: 700px;
+  >img {
+    cursor: pointer;
+   &:hover {
+    filter: brightness(0) saturate(100%) invert(76%) sepia(89%) saturate(363%) hue-rotate(24deg) brightness(99%) contrast(93%);
+   }
+  }
+}
+
+.lang-select {
+  display: flex;
+  margin-left: 48px;
+  gap: 6px;
+  >span{
+    cursor: pointer;
+    &:hover {
+      color: $highlightFontColor;
+    }
+  }
+}
+
+@media (width >= 999px) and (width <= 1050px) {
+.person-pic {
+  width: 845px;
+}
+}

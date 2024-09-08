@@ -1,0 +1,188 @@
+@import "../../../styles.scss";
+
+section {
+  @include desktopMode {
+    display: flex;
+    min-width: 835px;
+    height: 100vh;
+    gap: 40px;
+    >div {
+      padding-top: 164px;
+      
+    }
+  }
+}
+
+div {
+  @include desktopMode {
+    padding: 0;
+  }
+  padding: 0 26px;
+  font-size: 16px;
+}
+
+.i-am-section {
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: $highlightFontColor;
+    margin: 0;
+    @include desktopMode {
+      font-size: 48px;
+      width: 100%;
+    }
+  }
+  @include flexBoxStandarts(flex, center, center);
+  flex-direction: column;
+  gap: 16px;
+  @include desktopMode {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.relocate-img {
+  transition: transform 200ms ease-out, opacity 200ms ease-out;
+}
+.image-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include size(95px, 128px);
+  height: auto;
+  &:hover {
+    color: #b5e93b;
+  }
+}
+
+.hover-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: -3px;
+  transition: opacity 75ms ease-out;
+ 
+  @include desktopMode {
+    width: unset;
+    left: unset;
+  }
+}
+
+.top-center {
+  top: 10px;
+}
+
+.hover-image.hover {
+  opacity: 0;
+}
+
+.image-container:hover .hover {
+  opacity: 1;
+}
+
+.image-container:hover + .txt-with-icon {
+  color: $highlightFontColor !important;
+}
+
+.image-container:hover .normal {
+  opacity: 0;
+}
+
+.placetaker {
+  @include size(35px, 128px);
+  margin-bottom: 5px;
+}
+
+.placetaker-second {
+  @include size(60px, 128px);
+  margin-bottom: 5px;
+  @include desktopMode {
+    @include size(45px, 128px);
+  }
+}
+
+button {
+  @include size(43px, 135px);
+  border-style: unset;
+  background-color: $navigationBgColor;
+  border-radius: 30px;
+  color: #4a4a4a;
+  margin-bottom: 80px;
+  &:hover {
+    background: linear-gradient(160.33deg, #b5e93b 50.78%, #547800 133.54%);
+  }
+}
+
+.txt-with-icon {
+  inline-size: max-content;
+  &hover {
+    color: $highlightFontColor;
+  }
+}
+
+.mbt50 {
+  margin-top: 50px;
+}
+
+.mobile-txt {
+  display: block;
+  @include desktopMode {
+    display: none;
+  }
+}
+
+.desktop-txt {
+  display: none;
+  @include desktopMode {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 18px;
+  }
+}
+
+.image-wrapper {
+  @include desktopMode {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+  }
+}
+
+.mobile-img {
+  @include desktopMode {
+    display: none;
+  }
+}
+
+.desktop-img {
+  display: none;
+  @include desktopMode {
+    display: block;
+  }
+}
+
+.contact-me-btn {
+  display: flex;
+  width: 100%;
+ justify-content: center;
+ @include desktopMode {
+  justify-content: flex-end;
+ }
+}
+
+.arrow {
+  display: flex;
+    align-items: flex-end;
+    margin-bottom: 61px;
+}
+
+.section-wrapper {
+  @include desktopMode {
+    width: 715px;
+    margin-left: 40px;
+  }
+
+}

@@ -1,0 +1,44 @@
+@mixin mobile380px {
+    @media(width  <= 382px ) {
+      @content
+        }
+};
+
+@mixin mobile360px {
+    @media (width <= 360px) {
+        @content
+    }
+};
+
+
+@mixin desktopMode {
+    @media (width >= 1000px) {
+        @content
+    }
+};
+
+@mixin mobile500px {
+    @media (width <= 500px) {
+        @content
+    }
+};
+
+
+@mixin mobile745px {
+    @media (width >= 744px)  {
+        @content
+    }
+};
+
+@mixin mobile800px {
+    @media (width >=799px) {
+        @content
+    }
+};
+@mixin mobile600px {
+    @media (min-width: 600px)  { 
+        @content
+}
+
+
+}

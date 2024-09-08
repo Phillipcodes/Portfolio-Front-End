@@ -1,0 +1,54 @@
+<section>
+  <div class="main-headline"><img src=".\assets\img\My-work-rotate.svg" alt="" /></div>
+  @for(item of myWork; track item; let i = $index) {
+  <div class="work-container">
+    <div class="headline">
+      <img [src]="item.numberDesktop" alt="" />
+      <h1>{{ item.project }}</h1>
+    </div>
+    <div class="main-container">
+      <div class="main-content">
+        <div class="txt-box">
+          <div class="sub-headline">
+            <img
+              src="./assets/img/bulletpoint25.png
+        "
+              alt=""
+            />
+            <h3>About the Project</h3>
+          </div>
+          <span>{{ item.about }}</span>
+          <div class="sub-headline">
+            <img
+              src="./assets/img/bulletpoint25.png
+        "
+              alt=""
+            />
+            <h3>Technologies i have used</h3>
+          </div>
+          <span class="word-space">{{ item.tec }}</span>
+        </div>
+        <div class="btn-img-container">
+          <img [src]="item.path" alt="" />
+          <div class="btn-wrapper">
+            <button class="git-btn">GitHub</button>
+            <button class="live-test-btn">Live Test</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="sub-headline">
+          <img
+            src="./assets/img/bulletpoint25.png
+      "
+            alt=""
+          />
+          <h3>What i have learned</h3>
+        </div>
+        <span class="width">{{ item.learned }}</span>
+      </div>
+    </div>
+    <div></div>
+  </div>
+  }
+</section>

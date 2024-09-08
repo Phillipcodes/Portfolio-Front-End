@@ -1,0 +1,25 @@
+
+<section>
+    
+<div class="headline"><img src="./assets/img/myskillsetdesktop.svg" alt=""></div>
+
+<div class="skill-container">
+    <span>The IT landscape is continuously evolving, with new technologies and methodologies. Staying motivated to expand my IT skills requires a strategic approach, a curious mindset, and a commitment to lifelong learning.</span>
+    <div>
+    @for (icon of icons; track $index) {
+        
+            <div>
+                <img [src]="icon.path" alt="">
+                <span>{{icon.name}}</span>
+              
+            </div>
+              
+       
+    }
+ 
+</div>
+<span class="place-absolut">I am always happy to learn new technonogies,
+    just tell me what you need.</span>
+</div>
+<div class="arrow-right"><img src="./assets/img/arrow-right.png" alt=""></div>
+</section>
