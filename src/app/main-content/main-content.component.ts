@@ -13,29 +13,36 @@ import { debounceTime, fromEvent } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { SkillsDesktopComponent } from './skills-desktop/skills-desktop.component';
 import { MyWorkDesktopComponent } from './my-work-desktop/my-work-desktop.component';
+import { PreFooterDesktopComponent } from '../pre-footer-desktop/pre-footer-desktop.component';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [CommonModule, AboveTheFoldComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, TeamPlayerComponent, ContactComponent, PreFooterComponent, FooterComponent, ImprintComponent, NavbarComponent,SkillsDesktopComponent,MyWorkDesktopComponent],
+  imports: [CommonModule, AboveTheFoldComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, TeamPlayerComponent, ContactComponent, PreFooterComponent, FooterComponent, ImprintComponent, NavbarComponent,SkillsDesktopComponent,MyWorkDesktopComponent,PreFooterDesktopComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
 public isMobile:boolean = false;
 public isDesktop:boolean = false;
+public isExternSite:boolean =false;
 
-
-constructor() {
+constructor(private router: Router) {
   this.updateViewportSize();
   fromEvent(window, 'resize').pipe(debounceTime(100)).subscribe(() => this.updateViewportSize())
+
 }
 
 updateViewportSize() {
   const width = window.innerWidth;
-  this.isMobile = width <= 999
-  this.isDesktop = width >= 1000
+  this.isMobile = width <=899
+  this.isDesktop = width >= 900
 }
 
+
+
 }
+

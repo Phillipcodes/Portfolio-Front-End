@@ -1,5 +1,6 @@
 <section>
-  <div class="pad-info-box">
+  <div class="wrapper-content" *ngIf="isDesktop">
+  <div *ngIf="!isDesktop" class="pad-info-box">
     <header>
       <img src="./assets/img/contactme.svg" alt="" />
       <h4>Let us work together.</h4>
@@ -11,7 +12,7 @@
       sint?</span
     >
   </div>
-  <div class="contact-info">
+  <div *ngIf="!isDesktop" class="contact-info">
     <div class="hover-effect-mail">
       <img  src="./assets/icons/mail.png" alt="" />
       <a href="mailto:example@example.com">E-mail:Phillip&#64;gmail.com</a>
@@ -20,6 +21,7 @@
       <img src="./assets/icons/phone.png" alt="" /><a href="tel:">Tel:01734914671</a>
     </div>
   </div>
+  
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" >
     <label for="name"></label>
     <input
@@ -86,7 +88,11 @@
     </div>
     
     <div class="btn-container">
-      <input class="submit-btn" type="submit" name="" value="submit" [ngClass]="{'active-submit-btn': messageInput.valid && emailInput.valid && nameInput.valid && privacyPolicy}"  />
+      <input class="submit-btn" type="submit" name="" value="Send" [ngClass]="{'active-submit-btn': messageInput.valid && emailInput.valid && nameInput.valid && privacyPolicy}"  />
     </div>
   </form>
+  <div class="mr-40" *ngIf="isDesktop">
+    <img src="./assets/img/contactme-rotate.svg" alt="">
+  </div>
+</div>
 </section>

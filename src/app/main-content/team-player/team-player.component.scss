@@ -1,7 +1,14 @@
 @import "../../../styles.scss";
+@import "../../../media-query.scss";
 
-
-
+section {
+  @include desktopMode {
+    display: flex;
+    align-items: flex-end;
+    height: 93vh;
+    margin-left: 104px;
+  }
+}
 
 header {
   h3 {
@@ -17,33 +24,39 @@ header {
   border-radius: 30px;
   min-height: 176px;
   min-width: 370px;
- 
-@include flexBoxStandarts(flex,center,center);
-gap: 8px;
-  
+  @include desktopMode {
+    min-height: 182px;
+    min-width: 478px;
+  }
+
+  @include flexBoxStandarts(flex, center, center);
+  gap: 8px;
+
   .seperator {
-    background-color: #D3ED97;
+    background-color: #d3ed97;
     width: 1px;
-    height:128px;
+    height: 128px;
     margin-right: 14px;
   }
   span {
     font-size: 13px;
     max-width: 174px;
-   
+    @include desktopMode {
+      font-size: 18px;
+      max-width: 253px;
+    }
   }
 
   h3 {
     font-size: 22px;
     color: $highlightFontColor;
     margin: 0;
-    max-width: 120px
+    max-width: 120px;
   }
- 
 }
 
 .carousel {
-  @include flexBoxStandarts(flex,center,center);
+  @include flexBoxStandarts(flex, center, center);
   margin-top: 18px;
   margin-bottom: 80px;
 }
@@ -52,8 +65,21 @@ gap: 8px;
   display: flex;
   overflow-x: auto;
   gap: 8px;
+  @include desktopMode {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 16px;
+  }
+}
+.project {
+  color: #d3ed97;
 }
 
-.project {
-  color: #D3ED97;
+.headline {
+  margin-right: 40px;
+}
+
+.arrow {
+  height: 52%;
 }

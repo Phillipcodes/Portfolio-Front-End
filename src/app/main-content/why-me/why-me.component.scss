@@ -6,6 +6,7 @@ section {
     min-width: 835px;
     height: 100vh;
     gap: 40px;
+    margin-left: 104px;
     >div {
       padding-top: 164px;
       
@@ -182,7 +183,7 @@ button {
 .section-wrapper {
   @include desktopMode {
     width: 715px;
-    margin-left: 40px;
+    margin-left: 20px;
   }
 
 }

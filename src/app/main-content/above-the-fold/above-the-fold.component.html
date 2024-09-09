@@ -12,13 +12,19 @@
         <span>EN</span>
       </div>
       </div>
+      <div *ngIf="isDesktop" class="name-wrapper">
+      <span class="name">Phillip Sauer</span>
+      <div><img src="./assets/img/Frontend-Developer.svg" alt=""></div>
     </div>
-    <div *ngIf="isDesktop" class="arrow">
+    </div>
+    <div class="arrow responsiv-arrow" *ngIf="isDesktop">
+    <a href="#me" >
       <img src="./assets/img/arrow-right.png" alt="" />
-    </div>
+    </a>
+  </div>
   </div>
     
-    <div class="name-profession-txt">
+    <div *ngIf="!isDesktop" class="name-profession-txt">
       <h2>FRONTEND DEVELOPER</h2>
       <h1>Phillip Sauer</h1>
       <h3>Duessldorf</h3>

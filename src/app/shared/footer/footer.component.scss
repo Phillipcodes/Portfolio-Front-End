@@ -12,14 +12,17 @@ footer {
     @include size(80px,80px)
    }
    @include desktopMode {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100%;
+    
     display: none;
    }
 }
+
+.show-footer {
+    @include desktopMode {
+        display: flex;
+    }
+}
+
 
 .notice-block {
     display: flex;

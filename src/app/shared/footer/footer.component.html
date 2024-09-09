@@ -1,10 +1,10 @@
-<footer>
-  <img src="./assets/icons/personal-logo.png" alt="" />
+<footer [ngClass]="{'show-footer': ShowFooter}">
+  <a href="#main"><img src="./assets/icons/personal-logo.png" alt="" /> </a>
   <div class="notice-block">
     <span>&copy; Phillip-Marcel Sauer 2024</span>
     <div>
-     <a href=""> <span> Legal notice</span></a>
-      <a href="imprint"><span> Imprint </span></a>
+     <a href="imprint"> <span> Legal notice</span></a>
+      <a href="privacy"><span> Privacy policy </span></a>
     </div>
   </div>
 </footer>

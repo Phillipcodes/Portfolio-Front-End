@@ -1,8 +1,9 @@
 <section>
-<header>
+<header *ngIf="!isDesktop">
 <h3>Need a teamplayer?</h3>
 <span>Here what my colleagues said about me</span>
 </header>
+<div class="headline" *ngIf="isDesktop"><img src="./assets/img/desktop-references-headline.png" alt=""></div>
 <div #refContainer class="ref-container">
 @for(ref of referencesTxt; track $index) {
 <div class="references" >
@@ -15,5 +16,8 @@
 </div>
 }
 </div>
-<div class="carousel"><img [src]="currentCarousel" alt=""></div>
+<div *ngIf="!isDesktop" class="carousel"><img [src]="currentCarousel" alt=""></div>
+<div class="arrow" *ngIf="isDesktop">
+<a href="#contact" ><img src="./assets/img/arrow-right.png" alt=""></a>
+</div>
 </section>

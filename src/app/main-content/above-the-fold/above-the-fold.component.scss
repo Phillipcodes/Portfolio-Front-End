@@ -65,6 +65,7 @@ section {
   @include desktopMode {
     @include size(100vh,870px);
     background-size: 75% 95%;
+    position: relative;
   }
 }
 
@@ -86,15 +87,13 @@ section {
     @include size(134px,100%);
     padding-top:19.5px;
     margin-bottom: 80px;
-    @include desktopMode {
-      display: none;
-    }
+
     
 }
 
 .arrow {
   padding-top: 348px;
-  cursor: pointer;
+ 
 
 }
 
@@ -115,7 +114,7 @@ section {
   gap: 16px;
   margin-top: 35px;
   position: fixed;
-    left: 700px;
+  left: clamp(500px, 100vw - 350px, 1100px);
   >img {
     cursor: pointer;
    &:hover {
@@ -136,8 +135,38 @@ section {
   }
 }
 
-@media (width >= 999px) and (width <= 1050px) {
+@media (width >= 900px) and (width <= 1120px) {
 .person-pic {
-  width: 845px;
+  width: 750px;
+  background-size: 85% 95%;
+}
+
+
+.responsiv-arrow {
+  margin: 0;
+}
+}
+
+.name-wrapper {
+  position: absolute;
+  left: 21%;
+  top: 63%;
+  >div {
+    display: flex;
+    justify-content: right;
+  }
+
+}
+
+.name {
+  font-size: 100px;
+  font-weight: 700;
+  word-spacing: 25px;
+  color: $highlightFontColor;
+  
+}
+@media (width <= 1121px)  {
+.name {
+  font-size: 92px;
 }
 }

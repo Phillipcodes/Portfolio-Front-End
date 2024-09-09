@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component,ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { Component,ElementRef, AfterViewInit, ViewChild, Input } from '@angular/core';
 
 
 @Component({
@@ -10,6 +10,7 @@ import { Component,ElementRef, AfterViewInit, ViewChild } from '@angular/core';
   styleUrl: './team-player.component.scss',
 })
 export class TeamPlayerComponent implements AfterViewInit {
+  @Input() isDesktop!:boolean
   @ViewChild('refContainer') refContainer!: ElementRef;
   carousel = ['./assets/img/carousel-1.png','./assets/img/carousel-2.png','./assets/img/carousel-3.png']
   currentCarousel = this.carousel[0]
