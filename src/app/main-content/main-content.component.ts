@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild,AfterViewInit,ElementRef} from '@angular/core';
 import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
 import { WhyMeComponent } from './why-me/why-me.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -25,16 +25,42 @@ import { filter } from 'rxjs/operators';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
-export class MainContentComponent {
+
+export class MainContentComponent implements AfterViewInit {
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
 public isMobile:boolean = false;
 public isDesktop:boolean = false;
 public isExternSite:boolean =false;
-
+public animiationOne:boolean =false;
 constructor(private router: Router) {
+
+ 
   this.updateViewportSize();
   fromEvent(window, 'resize').pipe(debounceTime(100)).subscribe(() => this.updateViewportSize())
 
 }
+
+ngAfterViewInit() {
+    
+  const container = this.scrollContainer.nativeElement;
+  container.addEventListener('scroll', this.onScroll.bind(this));
+}
+
+onScroll(event: Event): void {
+  const container = this.scrollContainer.nativeElement;
+  const scrollLeft = container.scrollLeft; 
+
+if(scrollLeft >= 3100) {
+  this.animiationOne = true
+} else if (scrollLeft <= 2900) {
+  this.animiationOne = false
+}
+
+
+
+  console.log(`Scroll position: ${scrollLeft}px`);
+}
+
 
 updateViewportSize() {
   const width = window.innerWidth;

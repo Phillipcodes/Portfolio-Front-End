@@ -4,8 +4,8 @@
 html {
   overflow: auto;
   @include desktopMode {
-    overflow: scroll;
-    overflow-y: hidden;
+    overflow: hidden;
+    
   }
 
 }

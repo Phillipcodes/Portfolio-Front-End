@@ -1,7 +1,7 @@
-<section>
+<section  >
   <div class="main-headline"><img src=".\assets\img\My-work-rotate.svg" alt="" /></div>
   @for(item of myWork; track item; let i = $index) {
-  <div class="work-container">
+  <div [ngClass]="getClass(i)" class="work-container ">
     <div class="headline">
       <img [src]="item.numberDesktop" alt="" />
       <h1>{{ item.project }}</h1>

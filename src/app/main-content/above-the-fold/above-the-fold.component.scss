@@ -158,10 +158,41 @@ section {
 
 }
 
+.animation-wrapper {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards; /* Animation für den Vornamen */
+  animation-delay: 0.2s;
+}
+.animation-wrapper-2nd-name {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards; /* Animation für den Vornamen */
+  animation-delay: 1s;
+}
+
+.animation-wrapper-frontend {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards; /* Animation für den Vornamen */
+  animation-delay:1.5s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.name-content-wrapper {
+  gap: 15px;
+}
+
 .name {
   font-size: 100px;
   font-weight: 700;
-  word-spacing: 25px;
+  
   color: $highlightFontColor;
   
 }
@@ -170,3 +201,5 @@ section {
   font-size: 92px;
 }
 }
+
+
