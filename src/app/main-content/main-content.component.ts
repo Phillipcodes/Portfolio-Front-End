@@ -1,4 +1,4 @@
-import { Component,ViewChild,AfterViewInit,ElementRef} from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ElementRef ,inject} from '@angular/core';
 import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
 import { WhyMeComponent } from './why-me/why-me.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -16,59 +16,72 @@ import { MyWorkDesktopComponent } from './my-work-desktop/my-work-desktop.compon
 import { PreFooterDesktopComponent } from '../pre-footer-desktop/pre-footer-desktop.component';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-
-
+import { TranslateService, TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpLoaderFactory } from '../app.translate-loader'
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [CommonModule, AboveTheFoldComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, TeamPlayerComponent, ContactComponent, PreFooterComponent, FooterComponent, ImprintComponent, NavbarComponent,SkillsDesktopComponent,MyWorkDesktopComponent,PreFooterDesktopComponent],
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
-})
-
-export class MainContentComponent implements AfterViewInit {
-  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
-public isMobile:boolean = false;
-public isDesktop:boolean = false;
-public isExternSite:boolean =false;
-public animiationOne:boolean =false;
-constructor(private router: Router) {
-
- 
-  this.updateViewportSize();
-  fromEvent(window, 'resize').pipe(debounceTime(100)).subscribe(() => this.updateViewportSize())
-
-}
-
-ngAfterViewInit() {
+  imports: [
+    CommonModule,
+    AboveTheFoldComponent,
+    WhyMeComponent,
+    SkillsComponent,
+    MyWorkComponent,
+    TeamPlayerComponent,
+    ContactComponent,
+    PreFooterComponent,
+    FooterComponent,
+    ImprintComponent,
+    NavbarComponent,
+    SkillsDesktopComponent,
+    MyWorkDesktopComponent,
+    PreFooterDesktopComponent,
+    HttpClientModule,
     
-  const container = this.scrollContainer.nativeElement;
-  container.addEventListener('scroll', this.onScroll.bind(this));
+    
+  ],
+  templateUrl: './main-content.component.html',
+  styleUrl: './main-content.component.scss',
+})
+export class MainContentComponent implements AfterViewInit {
+  private translate = inject(TranslateService);
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
+  public isMobile: boolean = false;
+  public isDesktop: boolean = false;
+  public isExternSite: boolean = false;
+  public animiationOne: boolean = false;
+  constructor(private router: Router) {
+    this.updateViewportSize();
+    fromEvent(window, 'resize')
+      .pipe(debounceTime(100))
+      .subscribe(() => this.updateViewportSize());
+
+      this.translate.setDefaultLang('de');
+      this.translate.use('en'); 
+  }
+
+  ngAfterViewInit() {
+    const container = this.scrollContainer.nativeElement;
+    container.addEventListener('scroll', this.onScroll.bind(this));
+  }
+
+  onScroll(event: Event): void {
+    const container = this.scrollContainer.nativeElement;
+    const scrollLeft = container.scrollLeft;
+
+    if (scrollLeft >= 3100) {
+      this.animiationOne = true;
+    } else if (scrollLeft <= 2900) {
+      this.animiationOne = false;
+    }
+
+    console.log(`Scroll position: ${scrollLeft}px`);
+  }
+
+  updateViewportSize() {
+    const width = window.innerWidth;
+    this.isMobile = width <= 899;
+    this.isDesktop = width >= 900;
+  }
 }
-
-onScroll(event: Event): void {
-  const container = this.scrollContainer.nativeElement;
-  const scrollLeft = container.scrollLeft; 
-
-if(scrollLeft >= 3100) {
-  this.animiationOne = true
-} else if (scrollLeft <= 2900) {
-  this.animiationOne = false
-}
-
-
-
-  console.log(`Scroll position: ${scrollLeft}px`);
-}
-
-
-updateViewportSize() {
-  const width = window.innerWidth;
-  this.isMobile = width <=899
-  this.isDesktop = width >= 900
-}
-
-
-
-}
-
