@@ -7,13 +7,13 @@
       <div *ngIf="isDesktop" class="links">
         <img src="./assets/icons/mail-link.png" alt="" /><img src="./assets/icons/linkIn.png" alt="" /><img src="./assets/icons/git-link.png"alt="" />
         <div class="lang-select">
-        <span>DE</span>
-        <div class="seperator"></div>
-        <span>EN</span>
+        <span (click)="switchLanguage('de')">DE</span>
+        <div  class="seperator"></div>
+        <span (click)="switchLanguage('en')">EN</span>
       </div>
       </div>
       <div *ngIf="isDesktop" class="name-wrapper">
-      <div class="name-content-wrapper"><div class="animation-wrapper"><span class="name">Phillip </span></div> <div class="animation-wrapper-2nd-name"><span class="name ">Sauer</span></div></div>
+      <div class="name-content-wrapper"><div class="animation-wrapper"><span class="name">{{'WELCOME' | translate}} </span></div> <div class="animation-wrapper-2nd-name"><span class="name ">Sauer</span></div></div>
       <div class="animation-wrapper-frontend"><img src="./assets/img/Frontend-Developer.svg" alt=""></div>
     </div>
     </div>

@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import { Component,ViewChild,AfterViewInit,ElementRef} from '@angular/core';
+=======
+import { Component,ViewChild,AfterViewInit,ElementRef,inject} from '@angular/core';
+>>>>>>> Stashed changes
 import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
 import { WhyMeComponent } from './why-me/why-me.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -13,10 +17,15 @@ import { debounceTime, fromEvent } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { SkillsDesktopComponent } from './skills-desktop/skills-desktop.component';
 import { MyWorkDesktopComponent } from './my-work-desktop/my-work-desktop.component';
-import { PreFooterDesktopComponent } from '../pre-footer-desktop/pre-footer-desktop.component';
+
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+<<<<<<< Updated upstream
 
+=======
+import { TranslateService } from '@ngx-translate/core';
+import { PreFooterDesktopComponent } from '../pre-footer-desktop/pre-footer-desktop.component';
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-main-content',
@@ -26,20 +35,32 @@ import { filter } from 'rxjs/operators';
   styleUrl: './main-content.component.scss'
 })
 
+<<<<<<< Updated upstream
 export class MainContentComponent implements AfterViewInit {
+=======
+export class MainContentComponent implements AfterViewInit  {
+>>>>>>> Stashed changes
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
 public isMobile:boolean = false;
 public isDesktop:boolean = false;
 public isExternSite:boolean =false;
 public animiationOne:boolean =false;
+<<<<<<< Updated upstream
 constructor(private router: Router) {
+=======
+constructor(private router: Router,  ) {
+>>>>>>> Stashed changes
 
  
   this.updateViewportSize();
   fromEvent(window, 'resize').pipe(debounceTime(100)).subscribe(() => this.updateViewportSize())
 
 }
+<<<<<<< Updated upstream
 
+=======
+private translate = inject(TranslateService);
+>>>>>>> Stashed changes
 ngAfterViewInit() {
     
   const container = this.scrollContainer.nativeElement;

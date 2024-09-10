@@ -21,12 +21,22 @@ import { filter } from 'rxjs/operators';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
+
 export class AppComponent {
+<<<<<<< Updated upstream
+=======
+  private translate = inject(TranslateService);
+>>>>>>> Stashed changes
   title = 'portfoliopms';
 
   constructor(private titleService: Title, ) {
     this.titleService.setTitle('Phillip-Marcel Sauer');
+<<<<<<< Updated upstream
   
+=======
+    this.translate.setDefaultLang('de'); 
+    this.translate.use('de'); 
+>>>>>>> Stashed changes
   }
 
 }

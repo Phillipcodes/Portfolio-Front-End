@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import { WorkItem, WorkService } from './../interfaces/work-service';
+import { TranslateService ,TranslateModule} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-my-work',
@@ -10,22 +11,22 @@ import { WorkItem, WorkService } from './../interfaces/work-service';
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkComponent {
-  isListOpen: boolean[] = [false,false];
+  isListOpen: boolean[] = [false, false];
 
-  myWork:WorkItem[]=[]
+  myWork: WorkItem[] = [];
 
+  constructor(
+    private workService: WorkService,
 
-  constructor(private workService:WorkService) {
+  ) {}
 
-  }
-
-  toggleList(index:number) {
+  toggleList(index: number) {
     this.isListOpen[index] = !this.isListOpen[index];
   }
 
   ngOnInit(): void {
     this.myWork = this.workService.getJson();
     console.log(this.myWork);
-     ;
   }
+  
 }

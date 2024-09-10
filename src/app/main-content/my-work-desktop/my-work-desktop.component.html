@@ -1,5 +1,5 @@
 <section  >
-  <div class="main-headline"><img src=".\assets\img\My-work-rotate.svg" alt="" /></div>
+  <div class="main-headline"><img [src]="deImg[0]" alt="" /></div>
   @for(item of myWork; track item; let i = $index) {
   <div [ngClass]="getClass(i)" class="work-container ">
     <div class="headline">
