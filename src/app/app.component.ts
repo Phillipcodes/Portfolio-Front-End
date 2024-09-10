@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { Title } from '@angular/platform-browser';
@@ -7,6 +7,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ImprintComponent } from './main-content/imprint/imprint.component';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -17,26 +18,23 @@ import { filter } from 'rxjs/operators';
     NavbarComponent,
     ImprintComponent,
     FooterComponent,
+ 
+    
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 
 export class AppComponent {
-<<<<<<< Updated upstream
-=======
-  private translate = inject(TranslateService);
->>>>>>> Stashed changes
+  public translate = inject(TranslateService);
   title = 'portfoliopms';
 
   constructor(private titleService: Title, ) {
     this.titleService.setTitle('Phillip-Marcel Sauer');
-<<<<<<< Updated upstream
-  
-=======
     this.translate.setDefaultLang('de'); 
     this.translate.use('de'); 
->>>>>>> Stashed changes
+
+
   }
 
 }

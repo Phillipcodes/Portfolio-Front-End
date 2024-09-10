@@ -13,10 +13,10 @@ import { TranslationImgService } from '../interfaces/translation-img-service';
 export class MyWorkDesktopComponent {
   myWork: WorkItem[] = [];
   @Input() animationOne!: boolean;
-  public deImg!: string[];
-  private translationImgService = inject(TranslationImgService);
+
+  public translationImgService = inject(TranslationImgService);
   constructor(private workService: WorkService) {
-    this.deImg = this.translationImgService.deImg
+    
   }
 
   getClass(index: number) {

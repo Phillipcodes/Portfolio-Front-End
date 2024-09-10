@@ -1,6 +1,3 @@
 {
-    "WELCOME": "Willkomme2n",
-    "GREETING": "Hallo, wie geht's?",
-    "GOODBYE": "Auf Wiedersehen"
-    
+  "WELCOME": "hallo {{value}}"
   }

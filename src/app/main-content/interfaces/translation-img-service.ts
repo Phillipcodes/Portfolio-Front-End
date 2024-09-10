@@ -14,5 +14,7 @@ export class TranslationImgService {
     enImgCopy = ['./assets/img/whyMe.svg','./assets/img/myskillsetdesktop.svg','./assets/img/My-work-rotate.svg','./assets/img/desktop-references-headline.png','./assets/img/contactme-rotate.svg']
 
 
+
+   
     
 }
