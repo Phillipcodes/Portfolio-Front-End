@@ -1,6 +1,9 @@
 <section>
-  <div class="wrapper-content" *ngIf="isDesktop">
+  <div class="wrapper-content" >
   <div *ngIf="!isDesktop" class="pad-info-box">
+    <div class="arrow" *ngIf="isDesktop">
+      <a href="#contact" ><img src="./assets/img/arrow-right.png" alt=""></a>
+      </div>
     <header>
       <img src="./assets/img/contactme.svg" alt="" />
       <h4>Let us work together.</h4>
@@ -92,7 +95,8 @@
     </div>
   </form>
   <div class="mr-40" *ngIf="isDesktop">
-    <img src="./assets/img/contactme-rotate.svg" alt="">
+    <img [src]="translationImgService.deImg[4]" alt="">
   </div>
 </div>
+<app-message-response [ngClass]="{'fade-in': isMessageOut, 'd-none': !isMessageOut}"></app-message-response>
 </section>

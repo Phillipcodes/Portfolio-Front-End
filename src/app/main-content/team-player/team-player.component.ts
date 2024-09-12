@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component,ElementRef, AfterViewInit, ViewChild, Input } from '@angular/core';
+import { Component,ElementRef, AfterViewInit, ViewChild, Input,inject } from '@angular/core';
+import { TranslationImgService } from '../interfaces/translation-img-service';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { Component,ElementRef, AfterViewInit, ViewChild, Input } from '@angular/
   styleUrl: './team-player.component.scss',
 })
 export class TeamPlayerComponent implements AfterViewInit {
+  public translationImgService = inject(TranslationImgService);
   @Input() isDesktop!:boolean
   @ViewChild('refContainer') refContainer!: ElementRef;
   carousel = ['./assets/img/carousel-1.png','./assets/img/carousel-2.png','./assets/img/carousel-3.png']
@@ -18,7 +20,8 @@ export class TeamPlayerComponent implements AfterViewInit {
     {
       name: 'Andre Veltens',
       proj: 'Project Join',
-      txt: 'Phillip stood out as a reliable and motivated partner when working on a project. Thanks to our determined and efficient collaboration, we were able to achieve our project goals in a short space of time.',
+      txt: 'Phillip proved to be a reliable and motivated partner during the project work. Thanks to our determined and efficient collaboration, we were able to achieve our project goals in a brief period of time.'
+
     },
     {
       name: 'placeholder2',
@@ -42,7 +45,7 @@ export class TeamPlayerComponent implements AfterViewInit {
   onScroll(event: Event): void {
     const container = this.refContainer.nativeElement;
     const scrollLeft = container.scrollLeft; 
-
+    
     
     if (scrollLeft > 650) { 
       this.currentCarousel = this.carousel[2];

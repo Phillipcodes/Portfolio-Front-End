@@ -7,7 +7,8 @@ section {
     margin-right: 56px;
     margin-left: 104px;
     align-items: flex-end;
-    height: 83vh;
+    margin-top: 15px;
+   
   }
 }
 
@@ -216,6 +217,8 @@ a {
 
 .mr-40 {
   margin-right: 40px;
+  margin-top: 20px;
+
 }
 
 .wrapper-content {
@@ -224,3 +227,17 @@ a {
     flex-direction: row-reverse;
   }
 }
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; 
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fadeIn 1s ease-in-out; 
+}
+

@@ -1,15 +1,17 @@
-<div class="menu" [ngClass]="this.BurgerMenuService.menuIsOpen ? 'animate': 'animate-back'" >
+<div
 
+  class="menu"  
+  [ngClass]="this.BurgerMenuService.menuIsOpen ? 'animate' : 'animate-back'"
+>
   <div class="column">
-    <span>Why me</span>
-    <span>My skill set</span>
-    <span>My Work</span>
-    <span>Contact me</span>
+    <a (click)="toggleMenu()" href="#me">Why me</a>
+    <a (click)="toggleMenu()" href="#skillsMobile">My skill set</a>
+    <a (click)="toggleMenu()" href="#myWorkMobile">My Work</a>
+    <a (click)="toggleMenu()" href="#contact">Contact me</a>
     <div>
-        <span>DE</span>
-        <div class="seperator"></div>
-        <span>EN</span>
+      <span [class.selected]="!isSelected" (click)="switchLanguage('de')">DE</span>
+      <div class="seperator"></div>
+      <span [class.selected]="isSelected" (click)="switchLanguage('en')">EN</span>
     </div>
-
-</div>
+  </div>
 </div>

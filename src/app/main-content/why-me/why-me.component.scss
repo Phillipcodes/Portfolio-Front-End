@@ -4,7 +4,7 @@ section {
   @include desktopMode {
     display: flex;
     min-width: 835px;
-    height: 100vh;
+    margin-bottom: 404px;
     gap: 40px;
     margin-left: 104px;
     >div {

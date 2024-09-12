@@ -5,7 +5,7 @@ section {
   @include desktopMode {
     display: flex;
     align-items: flex-end;
-    height: 93vh;
+    margin-top: 239px;
     margin-left: 104px;
   }
 }
@@ -65,11 +65,13 @@ header {
   display: flex;
   overflow-x: auto;
   gap: 8px;
+  max-width: 372px;
   @include desktopMode {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     gap: 16px;
+    max-width: unset;
   }
 }
 .project {
@@ -78,8 +80,11 @@ header {
 
 .headline {
   margin-right: 40px;
+  margin-left: 104px;
 }
 
-.arrow {
-  height: 52%;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
 }

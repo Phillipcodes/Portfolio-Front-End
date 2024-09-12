@@ -1,1 +1,18 @@
-<p>imprint works!</p>
+<section>
+    <div class="lang-select">
+    <span (click)="switchLanguage('de')">DE</span>
+        <div class="seperator"></div>
+        <span (click)="switchLanguage('en')">EN</span>
+    </div>
+        <div class="wrapper">
+<h1>{{"IMPRINT.Title" | translate}}</h1>
+<p>Phillip-Marcel Sauer<br />
+Lindenweg 1<br />
+51709 Marienheide</p>
+<h2>{{"IMPRINT.Contact" | translate}}</h2>
+<p>{{"IMPRINT.Phone" | translate}} 015734914581<br />
+E-Mail: phillipsauer00&commat;gmail.com</p>
+<p>{{"IMPRINT.Source" | translate}}: <a href="https://www.e-recht24.de/impressum-generator.html">https://www.e-recht24.de/impressum-
+generator.html</a></p>
+</div>
+</section>

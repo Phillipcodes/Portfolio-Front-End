@@ -5,15 +5,15 @@
     <div  class="wrapper">
     <div class="person-pic">
       <div *ngIf="isDesktop" class="links">
-        <img src="./assets/icons/mail-link.png" alt="" /><img src="./assets/icons/linkIn.png" alt="" /><img src="./assets/icons/git-link.png"alt="" />
+        <a href="mailto:phillip@phillip-marcel-sauer.com"><img src="./assets/icons/mail-link.png" alt="" /></a> <a href="https://www.linkedin.com/in/phillip-sauer/" target="_blank"><img src="./assets/icons/linkIn.png" alt="" /></a> <a href="https://github.com/Phillipcodes" target="_blank"><img src="./assets/icons/git-link.png"alt="" /></a>
         <div class="lang-select">
-        <span (click)="switchLanguage('de')">DE</span>
-        <div  class="seperator"></div>
-        <span (click)="switchLanguage('en')">EN</span>
+        <span [class.selected]="!isSelected" (click)="switchLanguage('de')">DE</span>
+        <div class="seperator"></div>
+        <span [class.selected]="isSelected" (click)="switchLanguage('en')">EN</span>
       </div>
       </div>
       <div *ngIf="isDesktop" class="name-wrapper">
-      <div class="name-content-wrapper"><div class="animation-wrapper"><span class="name">{{'WELCOME' | translate}} </span></div> <div class="animation-wrapper-2nd-name"><span class="name ">Sauer</span></div></div>
+      <div class="name-content-wrapper"><div class="animation-wrapper"><span class="name">Phillip </span></div> <div class="animation-wrapper-2nd-name"><span class="name ">Sauer</span></div></div>
       <div class="animation-wrapper-frontend"><img src="./assets/img/Frontend-Developer.svg" alt=""></div>
     </div>
     </div>
@@ -27,7 +27,7 @@
     <div *ngIf="!isDesktop" class="name-profession-txt">
       <h2>FRONTEND DEVELOPER</h2>
       <h1>Phillip Sauer</h1>
-      <h3>Duessldorf</h3>
+      <h3>Duesseldorf</h3>
     </div>
   </div>
 </section>

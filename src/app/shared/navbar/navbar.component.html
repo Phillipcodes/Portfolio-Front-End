@@ -6,31 +6,31 @@
   </nav>
   <div *ngIf="isDesktop" class="navigation-line">
     <a href="#me" (click)="activeNav(0)">
-      <img [src]="currentImg[0]" alt="">
+      <img [src]="translationImgService.currentImg[0]" alt="">
     </a>
     
     <a href="#skills" (click)="activeNav(1)">
-      <img [src]="currentImg[1]" alt="">
+      <img [src]="translationImgService.currentImg[1]" alt="">
     </a>
     
     <a href="#myWork" (click)="activeNav(2)">
-      <img [src]="currentImg[2]" alt="">
+      <img [src]="translationImgService.currentImg[2]" alt="">
     </a>
     
     <a href="#contact" (click)="activeNav(3)">
-      <img [src]="currentImg[3]" alt="">
+      <img [src]="translationImgService.currentImg[3]" alt="">
     </a>
   </div>
 </header>
 
 <div
   id="nav-icon1"
-  [ngClass]="{ open: this.isAnimation }"
-  (click)="toggleMenu()"
+  [ngClass]="{ open: this.BurgerMenuService.isAnimation}"
+  (click)="this.BurgerMenuService.toggleMenu()"
 >
   <span></span>
   <span></span>
   <span></span>
 </div>
-<app-burger-menu [ngClass]="{ 'd-none': menuClosedAtStart }"></app-burger-menu>
+<app-burger-menu *ngIf="!isDesktop" [ngClass]="{ 'd-none': this.BurgerMenuService.menuClosedAtStart}"></app-burger-menu>
 

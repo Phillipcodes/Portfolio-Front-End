@@ -1,22 +1,64 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import {
+  Component,
+  inject,
+  HostListener,
+  ElementRef,
+  Renderer2,
+} from '@angular/core';
 import { NavbarComponent } from '../../shared/navbar/navbar.component';
 import { BurgerMenuService } from '../interfaces/burger-menu-service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslationImgService } from '../interfaces/translation-img-service';
 
 @Component({
   selector: 'app-burger-menu',
   standalone: true,
-  imports: [CommonModule,NavbarComponent],
+  imports: [CommonModule, NavbarComponent, TranslateModule],
   templateUrl: './burger-menu.component.html',
-  styleUrl: './burger-menu.component.scss'
+  styleUrl: './burger-menu.component.scss',
 })
 export class BurgerMenuComponent {
-constructor(public BurgerMenuService:BurgerMenuService) {
-
-}
-
-  toggleMenu() {
-    this.BurgerMenuService.toggleMenu()
+  public translate = inject(TranslateService);
+  public translationImgService = inject(TranslationImgService);
+  isSelected:boolean = false;
+  constructor(
+    public BurgerMenuService: BurgerMenuService,
+    private elementRef: ElementRef,
+    private renderer: Renderer2
+  ) {
+    this.checkIfClickedOut();
   }
 
+  toggleMenu() {
+    this.BurgerMenuService.toggleMenu();
+  }
+
+  checkIfClickedOut() {
+    this.renderer.listen('window', 'click', (e: Event) => {
+      if (this.BurgerMenuService.menuIsOpen) {
+        if (!this.elementRef.nativeElement.contains(e.target)) {
+          this.BurgerMenuService.close();
+        }
+      }
+    });
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
+    console.log(language);
+    this.changeLanguageImg(language);
+    this.isSelected = !this.isSelected
+  }
+
+  changeLanguageImg(language: string) {
+    if (language === 'de') {
+      this.translationImgService.deImg = [
+        ...this.translationImgService.deImgCopy,
+      ];
+    }
+    if (language === 'en') {
+      this.translationImgService.deImg = [...this.translationImgService.enImg];
+    }
+  }
 }

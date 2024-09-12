@@ -7,7 +7,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ImprintComponent } from './main-content/imprint/imprint.component';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +18,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
     NavbarComponent,
     ImprintComponent,
     FooterComponent,
+    TranslateModule
  
     
   ],
@@ -31,8 +32,7 @@ export class AppComponent {
 
   constructor(private titleService: Title, ) {
     this.titleService.setTitle('Phillip-Marcel Sauer');
-    this.translate.setDefaultLang('de'); 
-    this.translate.use('de'); 
+  
 
 
   }

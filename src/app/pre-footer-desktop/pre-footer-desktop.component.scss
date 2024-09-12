@@ -74,8 +74,10 @@ footer {
   gap: 14px;
   align-items: end;
   a {
+    cursor: pointer;
     &:hover {
       color: #d3ed97;
+      
     }
   }
 }

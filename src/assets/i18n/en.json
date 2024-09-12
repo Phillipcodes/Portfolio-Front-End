@@ -1,4 +1,14 @@
 {
-    "WELCOME": "hello {{value}}"
+ "HOME":{
+  "Welcome": "hello",
+    "WhyMeTxt": " I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make ma a valuable memberof your team."
     
+  
+  },
+  "IMPRINT": {
+    "Title": "Imprint",
+    "Contact": "Contact",
+    "Phone": "Phone",
+    "Source": "Source"
   }
+}

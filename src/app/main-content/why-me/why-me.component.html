@@ -2,19 +2,15 @@
 
   <div>
     <img class="mobile-img" src="./assets/img/whyMemobile.svg" alt="" />
-    <img class="desktop-img" src="./assets/img/whyMe.svg" alt="" />
+    <img class="desktop-img" [src]="translationImgService.deImg[0]" alt="" />
     <p class="mobile-txt">
-      I am motivated to continuously learn new technologies and develop myself.
-      My ability to solve complex problems and my passion for programming make
-      me a valuable member of your team.
+     {{"HOME.WhyMeTxt" | translate}}
     </p>
   </div>
   <div class="section-wrapper">
   <div class="desktop-txt">
     <p>
-      I am motivated to continuously learn new technologies and develop myself.
-      My ability to solve complex problems and my passion for programming make
-      me a valuable member of your team.
+      {{"HOME.WhyMeTxt" | translate}}
     </p>
   </div>
   <div class="i-am-section">
@@ -75,9 +71,5 @@
   
   </div>
 </div>
-<div class="arrow">
-<a  href="#skills" *ngIf="isDesktop">
-  <img src="./assets/img/arrow-right.png" alt="">
-  </a>
-</div>
+
 </section>
