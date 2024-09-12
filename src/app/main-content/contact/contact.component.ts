@@ -4,11 +4,12 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { TranslationImgService } from '../interfaces/translation-img-service';
 import { MessageResponseComponent } from '../message-response/message-response.component';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule,MessageResponseComponent  ],
+  imports: [CommonModule, FormsModule,MessageResponseComponent,RouterLink  ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

@@ -8,6 +8,10 @@ import { ImprintComponent } from './main-content/imprint/imprint.component';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { BurgerMenuService } from './main-content/interfaces/burger-menu-service';
+import { FormsModule } from '@angular/forms';
+
+import { debounceTime, fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +22,9 @@ import { TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate
     NavbarComponent,
     ImprintComponent,
     FooterComponent,
-    TranslateModule
+    TranslateModule,
+  
+    
  
     
   ],
@@ -27,14 +33,26 @@ import { TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate
 })
 
 export class AppComponent {
+  public isMobile:boolean = false;
+public isDesktop:boolean = false;
+public isExternSite:boolean =false;
+public animiationOne:boolean =false;
+public burgerMenu = inject(BurgerMenuService);
   public translate = inject(TranslateService);
   title = 'portfoliopms';
 
   constructor(private titleService: Title, ) {
     this.titleService.setTitle('Phillip-Marcel Sauer');
-  
+    this.updateViewportSize();
+    fromEvent(window, 'resize').pipe(debounceTime(100)).subscribe(() => this.updateViewportSize())
 
 
   }
 
+  updateViewportSize() {
+    const width = window.innerWidth;
+    this.isMobile = width <=899
+    this.isDesktop = width >= 900
+  }
+  
 }

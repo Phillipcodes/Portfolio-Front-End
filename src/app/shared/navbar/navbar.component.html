@@ -1,26 +1,27 @@
-<header>
+<header [ngClass]="{'show-header': showHeader}" >
   <nav>
     <div>
      <a href="#main"> <img class="ps-logo" src="./assets/icons/personal-logo.png" alt="" /></a>
     </div>
+    <div *ngIf="isDesktop" class="navigation-line">
+      <a href="#me" (click)="activeNav(0)">
+        <img [src]="translationImgService.currentImg[0]" alt="">
+      </a>
+      
+      <a href="#skills" (click)="activeNav(1)">
+        <img [src]="translationImgService.currentImg[1]" alt="">
+      </a>
+      
+      <a href="#myWork" (click)="activeNav(2)">
+        <img [src]="translationImgService.currentImg[2]" alt="">
+      </a>
+      
+      <a href="#contact" (click)="activeNav(3)">
+        <img [src]="translationImgService.currentImg[3]" alt="">
+      </a>
+    </div>
   </nav>
-  <div *ngIf="isDesktop" class="navigation-line">
-    <a href="#me" (click)="activeNav(0)">
-      <img [src]="translationImgService.currentImg[0]" alt="">
-    </a>
-    
-    <a href="#skills" (click)="activeNav(1)">
-      <img [src]="translationImgService.currentImg[1]" alt="">
-    </a>
-    
-    <a href="#myWork" (click)="activeNav(2)">
-      <img [src]="translationImgService.currentImg[2]" alt="">
-    </a>
-    
-    <a href="#contact" (click)="activeNav(3)">
-      <img [src]="translationImgService.currentImg[3]" alt="">
-    </a>
-  </div>
+  
 </header>
 
 <div

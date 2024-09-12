@@ -9,8 +9,12 @@ import { filter } from 'rxjs/operators';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
+
 export class FooterComponent implements OnInit {
+  
 ShowFooter:boolean = false;
+showPrivacyFooter:boolean =false;
+
   constructor(private router:Router) {
 
   }
@@ -23,7 +27,9 @@ ShowFooter:boolean = false;
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
-      this.ShowFooter = this.router.url === '/imprint' || this.router.url === '/privacy';
+      this.ShowFooter = this.router.url === '/imprint' ;
+      this.showPrivacyFooter = this.router.url === '/privacy';
+  
     });
   
   }

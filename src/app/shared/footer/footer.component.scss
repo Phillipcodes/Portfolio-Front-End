@@ -18,9 +18,16 @@ footer {
 }
 
 .show-footer {
+    position: absolute;
+        bottom: 0;
     @include desktopMode {
         display: flex;
+        
     }
+}
+
+.show-privacy-footer {
+    display: flex;
 }
 
 
