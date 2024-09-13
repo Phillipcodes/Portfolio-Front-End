@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component,inject } from '@angular/core';
+import { Component,inject,Input } from '@angular/core';
 import { WorkItem, WorkService } from './../interfaces/work-service';
 import { TranslateService ,TranslateModule} from '@ngx-translate/core';
 
@@ -11,6 +11,7 @@ import { TranslateService ,TranslateModule} from '@ngx-translate/core';
   styleUrl: './my-work.component.scss',
 })
 export class MyWorkComponent {
+  @Input() animationMobile!: boolean;
   isListOpen: boolean[] = [false, false];
 
   myWork: WorkItem[] = [];
@@ -29,4 +30,8 @@ export class MyWorkComponent {
     console.log(this.myWork);
   }
   
+  getClass(index: number) {
+    return this.animationMobile ? `animate${index}` : 'animateBack';
+  }
+
 }

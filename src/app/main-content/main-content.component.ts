@@ -1,4 +1,4 @@
-import { Component,ViewChild,AfterViewInit,ElementRef,inject} from '@angular/core';
+import { Component,ViewChild,AfterViewInit,ElementRef,inject, HostListener} from '@angular/core';
 import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
 import { WhyMeComponent } from './why-me/why-me.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -24,7 +24,7 @@ import { MessageResponseComponent } from './message-response/message-response.co
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [CommonModule, AboveTheFoldComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, TeamPlayerComponent, ContactComponent, PreFooterComponent, FooterComponent, ImprintComponent, NavbarComponent,SkillsDesktopComponent,MyWorkDesktopComponent,PreFooterDesktopComponent,MessageResponseComponent],
+  imports: [CommonModule, AboveTheFoldComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, TeamPlayerComponent, ContactComponent, PreFooterComponent, FooterComponent, ImprintComponent, NavbarComponent,SkillsDesktopComponent,MyWorkDesktopComponent,PreFooterDesktopComponent,MessageResponseComponent,],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
@@ -35,6 +35,7 @@ public isMobile:boolean = false;
 public isDesktop:boolean = false;
 public isExternSite:boolean =false;
 public animiationOne:boolean =false;
+public animiationMobile:boolean =false;
 public burgerMenu = inject(BurgerMenuService);
 constructor(private router: Router,  ) {
 
@@ -48,22 +49,38 @@ ngAfterViewInit() {
     
   const container = this.scrollContainer.nativeElement;
   container.addEventListener('scroll', this.onScroll.bind(this));
+  window.addEventListener('scroll', this.onScroll.bind(this));
 }
 
 onScroll(event: Event): void {
   const container = this.scrollContainer.nativeElement;
   const scrollLeft = container.scrollLeft; 
+  const scrollTop = container.scrollTop; 
 
+  
 if(scrollLeft >= 3100) {
   this.animiationOne = true
 } else if (scrollLeft <= 2900) {
   this.animiationOne = false
 }
 
-
-
- 
 }
+
+@HostListener('window:scroll', ['$event'])
+onScrollMobile(event: Event): void {
+  const scrollTop = window.scrollY;  // Scrollposition auf der Y-Achse
+
+  if(scrollTop )
+
+
+  if (scrollTop >= 1900) {
+    this.animiationMobile = true;
+  } else if (scrollTop <= 1700) {
+    this.animiationMobile = false;
+  }
+
+}
+
 
 
 updateViewportSize() {

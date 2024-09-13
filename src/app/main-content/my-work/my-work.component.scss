@@ -7,6 +7,7 @@ header {
 
 section {
   @include flexBoxStandarts(flex, center, center);
+  opacity: 0;
 }
 
 .my-work-field {
@@ -108,5 +109,49 @@ button {
     font-size: 22px;
     margin-bottom: 8px;
     margin-top: 12px;
+  }
+}
+
+
+.animate0 {
+  
+  animation: slideFromLeft 1.5s ease-out forwards; /* Animation für den Vornamen */
+  
+}
+.animate1 {
+  
+  animation:  slideFromLeft 1.5s ease-out forwards; /* Animation für den Vornamen */
+  animation-delay: 2s;    
+  
+}
+
+.animateBack {
+  animation: slideLeftReverse 1.5s ease-out forwards;
+}
+
+@keyframes  slideFromLeft {
+  20% {
+    opacity: 0.2;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes slideLeftReverse {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0.2;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px); /* Sicherstellen, dass das Element am Ende nicht auf der Originalposition ist */
   }
 }

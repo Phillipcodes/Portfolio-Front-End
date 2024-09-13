@@ -2,7 +2,7 @@
 <header><img src="./assets/img/MyWork.svg" alt="" /></header>
 
 @for(item of myWork; track item; let i = $index) {
-<section
+<section [ngClass]="getClass(i)"
   [ngStyle]="
     isListOpen[i] ? { 'margin-bottom': '0' } : { 'margin-bottom': '40px' }
   "
