@@ -9,10 +9,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './my-work-desktop.component.scss'
 })
 export class MyWorkDesktopComponent {
+<<<<<<< Updated upstream
   myWork:WorkItem[]=[]
   @Input ()animationOne!:boolean;
 
   constructor(private workService:WorkService) {
+=======
+  myWork: WorkItem[] = [];
+  @Input() animationOne!: boolean;
+  @Input() scrollToSection!: (x:number,y:number) => void
+>>>>>>> Stashed changes
 
   }
 

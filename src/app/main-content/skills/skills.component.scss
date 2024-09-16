@@ -9,12 +9,12 @@ section {
 
 .icon-line {
   @include flexBoxStandarts(flex, center, unset);
-  gap: 32px 85px;
+  gap: 32px 84px;
   flex-wrap: wrap;
   padding: 40px 29px;
   margin-bottom: 22px;
   @include mobile600px{
-    padding: 40px 70px;
+    padding: 40px clamp(40px, 10vw, 120px);
   }
   @include mobile800px {
     padding: 40px 49px;
@@ -46,7 +46,9 @@ section {
   @include mobile500px {
     gap: 32px calc(50px + (85 - 53) * ((100vw - 320px) / (382 - 320))) 
   }
- 
+ @media (width >= 619px ) and (width <= 730px) {
+  padding: 40px clamp(40px, 13vw, 119px);
+ }
 }
 
 span {

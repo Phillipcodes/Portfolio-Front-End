@@ -1,6 +1,7 @@
 @import "./app/fonts.scss";
 @import "./media-query.scss";
 
+<<<<<<< Updated upstream
 html {
   overflow: auto;
   @include desktopMode {
@@ -8,6 +9,39 @@ html {
     
   }
 
+=======
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thick;
+    scrollbar-color: #97ac2f #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #97ac2f;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+  }
+
+
+html  {
+ 
+  @include desktopMode {
+    // overflow-y: hidden;
+ 
+    
+  }
+>>>>>>> Stashed changes
 }
 
 * {
@@ -28,6 +62,7 @@ body {
     #101010 94.49%
   );
 
+
   @include desktopMode {
     // background: linear-gradient(45deg, #000000 15%, #1A1A1A 25%, #0B0A0A 39%, #1e1e1e 55%, #101010 76%, #000000 90%);
     background: linear-gradient(
@@ -38,8 +73,12 @@ body {
       #141414 76%,
       #000 100%
     );
+    background-attachment: fixed;
   }
+  
 }
+
+
 
 // Variables
 

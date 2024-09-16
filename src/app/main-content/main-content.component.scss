@@ -1,6 +1,7 @@
-@import '../../media-query.scss';
+@import "../../media-query.scss";
 
 .bg-g {
+<<<<<<< Updated upstream
     cursor: default;
     @include desktopMode {
         display: flex;
@@ -9,3 +10,13 @@
     }
 }
 
+=======
+  cursor: default;
+  @include desktopMode {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll  ;
+    max-height: 1000px;
+  }
+}
+>>>>>>> Stashed changes

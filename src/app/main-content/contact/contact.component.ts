@@ -41,6 +41,39 @@ export class ContactComponent {
     }
   }
 
+<<<<<<< Updated upstream
+=======
+ 
+
+  post = {
+    endPoint: 'https://phillip-marcel-sauer.com/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
+
+  phpRequest(ngForm: NgForm) {
+    
+    
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+
+            ngForm.resetForm();
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+      
+  }
+
+>>>>>>> Stashed changes
   validateName(input:any) {
     input.value = input.value.replace(/[^a-zA-Z!?]/g, '');
   }
@@ -59,5 +92,20 @@ export class ContactComponent {
     } else {
       this.imageSrc = './assets/icons/errorBox.png';
     }
+<<<<<<< Updated upstream
   }};
+=======
+  }
+  responseMessage() {
+    
+      this.isMessageOut = true;
+      setTimeout(() => {
+        this.isMessageOut = false;
+      }, 4000); 
+    }
+  }
+
+
+
+>>>>>>> Stashed changes
 

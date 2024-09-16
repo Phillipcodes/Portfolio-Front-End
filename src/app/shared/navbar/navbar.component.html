@@ -23,6 +23,10 @@
   </div>
 </header>
 
+
+ 
+
+
 <div
   id="nav-icon1"
   [ngClass]="{ open: this.isAnimation }"
@@ -32,5 +36,5 @@
   <span></span>
   <span></span>
 </div>
-<app-burger-menu [ngClass]="{ 'd-none': menuClosedAtStart }"></app-burger-menu>
+<app-burger-menu [scrollToSection]="scrollToSection" *ngIf="!isDesktop" [ngClass]="{ 'd-none': this.BurgerMenuService.menuClosedAtStart}"></app-burger-menu>
 

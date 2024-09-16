@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit, ElementRef ,inject} from '@angular/core';
+import { Component,ViewChild,AfterViewInit,ElementRef,inject, HostListener} from '@angular/core';
 import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
 import { WhyMeComponent } from './why-me/why-me.component';
 import { SkillsComponent } from './skills/skills.component';
@@ -13,75 +13,83 @@ import { debounceTime, fromEvent } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { SkillsDesktopComponent } from './skills-desktop/skills-desktop.component';
 import { MyWorkDesktopComponent } from './my-work-desktop/my-work-desktop.component';
-import { PreFooterDesktopComponent } from '../pre-footer-desktop/pre-footer-desktop.component';
+
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { TranslateService, TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { HttpLoaderFactory } from '../app.translate-loader'
+import { TranslateService } from '@ngx-translate/core';
+import { PreFooterDesktopComponent } from '../pre-footer-desktop/pre-footer-desktop.component';
+import { BurgerMenuService } from './interfaces/burger-menu-service';
+import { MessageResponseComponent } from './message-response/message-response.component';
+
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [
-    CommonModule,
-    AboveTheFoldComponent,
-    WhyMeComponent,
-    SkillsComponent,
-    MyWorkComponent,
-    TeamPlayerComponent,
-    ContactComponent,
-    PreFooterComponent,
-    FooterComponent,
-    ImprintComponent,
-    NavbarComponent,
-    SkillsDesktopComponent,
-    MyWorkDesktopComponent,
-    PreFooterDesktopComponent,
-    HttpClientModule,
-    
-    
-  ],
+  imports: [CommonModule, AboveTheFoldComponent, WhyMeComponent, SkillsComponent, MyWorkComponent, TeamPlayerComponent, ContactComponent, PreFooterComponent, FooterComponent, ImprintComponent, NavbarComponent,SkillsDesktopComponent,MyWorkDesktopComponent,PreFooterDesktopComponent,MessageResponseComponent,],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss',
+  styleUrl: './main-content.component.scss'
 })
-export class MainContentComponent implements AfterViewInit {
-  private translate = inject(TranslateService);
+
+export class MainContentComponent implements AfterViewInit  {
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
-  public isMobile: boolean = false;
-  public isDesktop: boolean = false;
-  public isExternSite: boolean = false;
-  public animiationOne: boolean = false;
-  constructor(private router: Router) {
-    this.updateViewportSize();
-    fromEvent(window, 'resize')
-      .pipe(debounceTime(100))
-      .subscribe(() => this.updateViewportSize());
+public isMobile:boolean = false;
+public isDesktop:boolean = false;
+public isExternSite:boolean =false;
+public animiationOne:boolean =false;
+public animiationMobile:boolean =false;
+public burgerMenu = inject(BurgerMenuService);
+constructor(private router: Router,  ) {
 
-      this.translate.setDefaultLang('de');
-      this.translate.use('en'); 
-  }
+ 
+  this.updateViewportSize();
+  fromEvent(window, 'resize').pipe(debounceTime(100)).subscribe(() => this.updateViewportSize())
 
-  ngAfterViewInit() {
-    const container = this.scrollContainer.nativeElement;
-    container.addEventListener('scroll', this.onScroll.bind(this));
-  }
-
-  onScroll(event: Event): void {
-    const container = this.scrollContainer.nativeElement;
-    const scrollLeft = container.scrollLeft;
-
-    if (scrollLeft >= 3100) {
-      this.animiationOne = true;
-    } else if (scrollLeft <= 2900) {
-      this.animiationOne = false;
-    }
-
-    console.log(`Scroll position: ${scrollLeft}px`);
-  }
-
-  updateViewportSize() {
-    const width = window.innerWidth;
-    this.isMobile = width <= 899;
-    this.isDesktop = width >= 900;
-  }
 }
+private translate = inject(TranslateService);
+ngAfterViewInit() {
+    
+  const container = this.scrollContainer.nativeElement;
+  container.addEventListener('scroll', this.onScroll.bind(this));
+  window.addEventListener('scroll', this.onScroll.bind(this));
+}
+
+onScroll(event: Event): void {
+  const container = this.scrollContainer.nativeElement;
+  const scrollLeft = container.scrollLeft; 
+  const scrollTop = container.scrollTop; 
+
+  
+if(scrollLeft >= 3100) {
+  this.animiationOne = true
+} else if (scrollLeft <= 2900) {
+  this.animiationOne = false
+}
+
+}
+
+@HostListener('window:scroll', ['$event'])
+onScrollMobile(event: Event): void {
+  const scrollTop = window.scrollY;  // Scrollposition auf der Y-Achse
+
+  if(scrollTop )
+
+
+  if (scrollTop >= 1900) {
+    this.animiationMobile = true;
+  } else if (scrollTop <= 1700) {
+    this.animiationMobile = false;
+  }
+
+}
+
+
+
+updateViewportSize() {
+  const width = window.innerWidth;
+  this.isMobile = width <=899
+  this.isDesktop = width >= 900
+}
+
+
+
+}
+

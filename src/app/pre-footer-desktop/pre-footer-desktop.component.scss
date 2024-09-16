@@ -3,10 +3,10 @@
 
 section {
   display: flex;
-  align-items: center;
-  height: 80vh;
+  align-items: center;  
   font-size: 18px;
-  height: 100vh;
+  height: calc(100vh - 17px);
+
   gap: 23px;
   padding-left: 45px;
 }

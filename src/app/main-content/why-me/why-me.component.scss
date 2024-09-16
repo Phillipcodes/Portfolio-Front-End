@@ -1,16 +1,19 @@
 @import "../../../styles.scss";
 
 section {
+  padding-top: 73px;
   @include desktopMode {
     display: flex;
     min-width: 835px;
+<<<<<<< Updated upstream
     height: 100vh;
+=======
+    margin-bottom: 100px;
+>>>>>>> Stashed changes
     gap: 40px;
-    margin-left: 104px;
-    >div {
-      padding-top: 164px;
-      
-    }
+   
+ 
+  
   }
 }
 

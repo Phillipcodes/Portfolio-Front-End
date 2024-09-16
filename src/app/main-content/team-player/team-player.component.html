@@ -3,7 +3,14 @@
 <h3>Need a teamplayer?</h3>
 <span>Here what my colleagues said about me</span>
 </header>
+<<<<<<< Updated upstream
 <div class="headline" *ngIf="isDesktop"><img src="./assets/img/desktop-references-headline.png" alt=""></div>
+=======
+<div *ngIf="isDesktop" class="arrow">
+<a (click)="scrollToSection(7450,0)"  ><img src="./assets/img/arrow-right.png" alt=""></a></div>
+<div class="headline" *ngIf="isDesktop"><img [src]="translationImgService.deImg[3]" alt=""></div>
+<div class="wrapper">
+>>>>>>> Stashed changes
 <div #refContainer class="ref-container">
 @for(ref of referencesTxt; track $index) {
 <div class="references" >

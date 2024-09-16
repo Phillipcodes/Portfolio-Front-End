@@ -10,6 +10,11 @@ import { Component,ElementRef, AfterViewInit, ViewChild, Input } from '@angular/
   styleUrl: './team-player.component.scss',
 })
 export class TeamPlayerComponent implements AfterViewInit {
+<<<<<<< Updated upstream
+=======
+  public translationImgService = inject(TranslationImgService);
+  @Input() scrollToSection!: (x:number,y:number) => void
+>>>>>>> Stashed changes
   @Input() isDesktop!:boolean
   @ViewChild('refContainer') refContainer!: ElementRef;
   carousel = ['./assets/img/carousel-1.png','./assets/img/carousel-2.png','./assets/img/carousel-3.png']

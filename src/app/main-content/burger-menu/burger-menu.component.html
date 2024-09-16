@@ -1,10 +1,17 @@
 <div class="menu" [ngClass]="this.BurgerMenuService.menuIsOpen ? 'animate': 'animate-back'" >
 
   <div class="column">
+<<<<<<< Updated upstream
     <span>Why me</span>
     <span>My skill set</span>
     <span>My Work</span>
     <span>Contact me</span>
+=======
+    <a href="#me" (click)="toggleMenu()">Why me</a>
+    <a href="#skillsMobile" (click)="toggleMenu()" >My skill set</a>
+    <a href="#myWorkMobile" (click)="toggleMenu()" >My Work</a>
+    <a href="#contact" (click)="toggleMenu()">Contact me</a>
+>>>>>>> Stashed changes
     <div>
         <span>DE</span>
         <div class="seperator"></div>

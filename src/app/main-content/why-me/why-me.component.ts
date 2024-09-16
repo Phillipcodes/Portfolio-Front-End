@@ -9,5 +9,10 @@ import { Component, Input } from '@angular/core';
   styleUrl: './why-me.component.scss'
 })
 export class WhyMeComponent {
+<<<<<<< Updated upstream
+=======
+  
+  public translationImgService = inject(TranslationImgService);
+>>>>>>> Stashed changes
 @Input() isDesktop!:boolean;
 }
