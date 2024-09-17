@@ -36,6 +36,7 @@ public isDesktop:boolean = false;
 public isExternSite:boolean =false;
 public animiationOne:boolean =false;
 public animiationMobile:boolean =false;
+scrollyToX:boolean = false
 public burgerMenu = inject(BurgerMenuService);
 constructor(private router: Router,  ) {
 
@@ -49,13 +50,16 @@ ngAfterViewInit() {
     
   const container = this.scrollContainer.nativeElement;
   container.addEventListener('scroll', this.onScroll.bind(this));
-  window.addEventListener('scroll', this.onScroll.bind(this));
+  window.addEventListener('scroll', this.onScrollMobile.bind(this));
+  container.addEventListener('wheel',this.onScrollY.bind(this))
 }
 
 onScroll(event: Event): void {
   const container = this.scrollContainer.nativeElement;
   const scrollLeft = container.scrollLeft; 
-  const scrollTop = container.scrollTop; 
+ 
+  console.log(scrollLeft);
+  
 
   
 if(scrollLeft >= 3100) {
@@ -81,12 +85,25 @@ onScrollMobile(event: Event): void {
 
 }
 
-
-
+onScrollY(event: WheelEvent) {
+  if(this.scrollyToX) {
+    event.preventDefault();
+  
+  
+    
+    const scrollSpeed = 3;
+  
+  
+    const deltaX = event.deltaY * scrollSpeed;
+  
+    this.scrollContainer.nativeElement.scrollBy(deltaX, 1);
+  }
+  } 
 updateViewportSize() {
   const width = window.innerWidth;
   this.isMobile = width <=899
   this.isDesktop = width >= 900
+  this.scrollyToX = width >899
 }
 
 

@@ -2,12 +2,12 @@
 @import "./media-query.scss";
 
 html {
-  overflow: auto;
+ overflow: hidden;
   @include desktopMode {
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
-    scrollbar-width: thin;
+    scrollbar-width: thick  ;
     scrollbar-color: #97ac2f #ffffff;
   }
 

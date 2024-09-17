@@ -4,13 +4,10 @@ section {
   @include desktopMode {
     display: flex;
     min-width: 835px;
-    margin-bottom: 404px;
+    margin-bottom: 181px;
     gap: 40px;
     margin-left: 104px;
-    >div {
-      padding-top: 164px;
-      
-    }
+  
   }
 }
 

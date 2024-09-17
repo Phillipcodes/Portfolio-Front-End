@@ -7,7 +7,7 @@ header {
   top: 0;
   z-index: 10;
   @include desktopMode {
-    @include size(100%,172px)
+    @include size(98.2%,172px)
   }
   >nav {
    
@@ -27,8 +27,8 @@ header {
 
 @keyframes slideDown {
   0% {
-     /* Startposition, z.B. außerhalb des sichtbaren Bereichs oben */
-    opacity: 1; /* Beginnt unsichtbar */
+     
+    opacity: 1; 
 
   }
 10% {
