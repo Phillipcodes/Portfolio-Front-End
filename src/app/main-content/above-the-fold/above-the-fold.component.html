@@ -17,8 +17,8 @@
       <div class="animation-wrapper-frontend"><img src="./assets/img/Frontend-Developer.svg" alt=""></div>
     </div>
     </div>
-    <div class="arrow responsiv-arrow" *ngIf="isDesktop">
-    <a href="#me" >
+    <div (click)="scrollToPosition()" class="arrow responsiv-arrow" *ngIf="isDesktop">
+    <a   >
       <img src="./assets/img/arrow-right.png" alt="" />
     </a>
   </div>

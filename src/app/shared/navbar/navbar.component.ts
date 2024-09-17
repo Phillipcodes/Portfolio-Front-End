@@ -5,6 +5,7 @@ import { BurgerMenuService } from '../../main-content/interfaces/burger-menu-ser
 import { TranslationImgService } from '../../main-content/interfaces/translation-img-service';
 import { Router, NavigationEnd, RouterModule } from '@angular/router';
 import { filter } from 'rxjs';
+import { ScrollService } from '../../main-content/interfaces/scroll-service';
 
 @Component({
   selector: 'app-navbar',
@@ -19,10 +20,16 @@ export class NavbarComponent implements OnInit {
   active:number | null = null;
   @Input() isDesktop!: boolean;
   public translationImgService = inject(TranslationImgService);
-  constructor(public BurgerMenuService: BurgerMenuService, private router:Router) {}
+  constructor(public BurgerMenuService: BurgerMenuService, private router:Router, private scrollService: ScrollService) {}
 
   
    
+  scrollToPosition(position:number) {
+    setTimeout(() => {
+      this.scrollService.setScrollPosition(position);
+    }, 0);
+  }
+  
   activeNav(imgRef:number) {
    
     if(this.translationImgService.isDe)  {

@@ -4,7 +4,7 @@
      <a href="#main"> <img class="ps-logo" src="./assets/icons/personal-logo.png" alt="" /></a>
     </div>
     <div *ngIf="isDesktop" class="navigation-line">
-      <a href="#me" (click)="activeNav(0)">
+      <a href="#me" (click)="scrollToPosition(835)" (click)="activeNav(0)">
         <img [src]="translationImgService.currentImg[0]" alt="">
       </a>
       

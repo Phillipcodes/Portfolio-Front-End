@@ -1,18 +1,18 @@
 
-<div    #scrollContainer class="bg-g" >
-   
-<!-- <app-navbar [isDesktop]="isDesktop"></app-navbar> -->
- 
-<app-above-the-fold id="main" [isDesktop]="isDesktop"></app-above-the-fold>
-<app-why-me id="me" [isDesktop]="isDesktop"></app-why-me>
-<app-skills id="skillsMobile"  *ngIf="isMobile"></app-skills>
-<app-skills-desktop id="skills" *ngIf="isDesktop"></app-skills-desktop>
-<app-my-work id="myWorkMobile" *ngIf="isMobile" [animationMobile]="animiationMobile"></app-my-work>
-<app-my-work-desktop *ngIf="isDesktop" id="myWork" [animationOne]="animiationOne"  ></app-my-work-desktop>
-<app-team-player id="references" [isDesktop]="isDesktop" ></app-team-player>
-<app-contact id="contact"  [isDesktop]="isDesktop"></app-contact>
-<app-pre-footer-desktop *ngIf="isDesktop"></app-pre-footer-desktop>
-<app-pre-footer *ngIf="isMobile"></app-pre-footer>
-</div>
+    <div #scrollContainer   class="bg-g" >
+    
+    <!-- <app-navbar [isDesktop]="isDesktop"></app-navbar> -->
+    
+    <app-above-the-fold id="main" [isDesktop]="isDesktop" [scrollToSection]="scrollToSection"  ></app-above-the-fold>
+    <app-why-me id="me" [isDesktop]="isDesktop"></app-why-me>
+    <app-skills id="skillsMobile"  *ngIf="isMobile"></app-skills>
+    <app-skills-desktop id="skills" *ngIf="isDesktop"></app-skills-desktop>
+    <app-my-work id="myWorkMobile" *ngIf="isMobile" [animationMobile]="animiationMobile"></app-my-work>
+    <app-my-work-desktop *ngIf="isDesktop" id="myWork" [animationOne]="animiationOne"  ></app-my-work-desktop>
+    <app-team-player id="references" [isDesktop]="isDesktop" ></app-team-player>
+    <app-contact id="contact"  [isDesktop]="isDesktop"></app-contact>
+    <app-pre-footer-desktop *ngIf="isDesktop"></app-pre-footer-desktop>
+    <app-pre-footer *ngIf="isMobile"></app-pre-footer>
+    </div>
 
 
