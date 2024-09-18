@@ -4,7 +4,8 @@
     cursor: default;
     @include desktopMode {
         display: flex;
-    
+        height: 100vh;
+        overflow-y: hidden;
         align-items: center;
         overflow-x: scroll;
     }

@@ -13,6 +13,6 @@ export class ImprintComponent {
   public translate = inject(TranslateService);
   switchLanguage(language:string) {
     this.translate.use(language);
-    console.log(language);
+    
   }
 }

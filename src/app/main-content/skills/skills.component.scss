@@ -8,22 +8,20 @@ section {
 }
 
 .icon-line {
-  @include flexBoxStandarts(flex, center, unset);
-  gap: 32px 85px;
+  @include flexBoxStandarts(flex, center, center);
+  gap: 32px 80px;
   flex-wrap: wrap;
-  padding: 40px 29px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   margin-bottom: 22px;
-  @include mobile600px{
-    padding: 40px 70px;
+
+  div:last-child {
+    visibility: hidden;
   }
-  @include mobile800px {
-    padding: 40px 49px;
-  }
- 
   div:hover {
     transform: scale(1.2) rotateZ(20deg);
     transition: ease-in-out 125ms;
-    
+
     img:hover {
       filter: drop-shadow(0 0 15px #b5e93b);
       transition: filter 455ms ease-out;
@@ -31,42 +29,39 @@ section {
   }
   div {
     @include size(51px, 46px);
-    
+
     p {
       display: none;
       margin: 0;
     }
-    &:last-child p {
+    &:nth-child(11) p {
       display: block;
-      color: #FFFDFD;
+      color: #fffdfd;
       width: 120px;
       margin-left: -50%;
     }
   }
-  @include mobile500px {
-    gap: 32px calc(50px + (85 - 53) * ((100vw - 320px) / (382 - 320))) 
-  }
- 
+  // @include mobile500px {
+  //   gap: 32px calc(50px + (85 - 53) * ((100vw - 320px) / (382 - 320)))
+  // }
 }
 
 span {
- display: flex;
+  display: flex;
   padding: 0 24px;
   margin-bottom: 40px;
 }
 button {
-    background-color: #b5e93b;
-    color: #4A4A4A;
-    border-radius: 30px;
-    @include size(43px,122px);
-    margin-bottom: 75px;
-    &:hover {
-      background: linear-gradient(160.33deg, #B5E93B 50.78%, #547800 133.54%);
-
-    }
+  background-color: #b5e93b;
+  color: #4a4a4a;
+  border-radius: 30px;
+  @include size(43px, 122px);
+  margin-bottom: 75px;
+  &:hover {
+    background: linear-gradient(160.33deg, #b5e93b 50.78%, #547800 133.54%);
+  }
 }
 
 .btn-container {
-    @include flexBoxStandarts(flex,center,center);
-  
+  @include flexBoxStandarts(flex, center, center);
 }

@@ -7,7 +7,7 @@ header {
   top: 0;
   z-index: 10;
   @include desktopMode {
-    @include size(98.2%,172px)
+    @include size(98.5%,172px)
   }
   >nav {
    
@@ -16,7 +16,9 @@ header {
   }
 }
 
-
+.full-height {
+  height: 100%
+}
 
 .ps-logo {
   @include size(64px,64px);

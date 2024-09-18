@@ -14,8 +14,10 @@ import { ScrollService } from '../../main-content/interfaces/scroll-service';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent  {
+export class NavbarComponent {
+  fullStyle:boolean = true;
   showHeader: boolean = false;
+  isMainPage:boolean = true;
   active: number | null = null;
   @Input() isDesktop!: boolean;
   public translationImgService = inject(TranslationImgService);
@@ -23,20 +25,18 @@ export class NavbarComponent  {
     public BurgerMenuService: BurgerMenuService,
     private router: Router,
     private scrollService: ScrollService
-  ) {}
+  ) {
+    this.checkUrl();
+  }
 
   scrollToPosition(position: number) {
     let width = window.innerWidth;
-    if (width < 990 && position == 3500) {
-      let calcPosition = position - 100;
-      setTimeout(() => {
-        this.scrollService.setScrollPosition(calcPosition);
-      }, 0);
-    } else {
-      setTimeout(() => {
-        this.scrollService.setScrollPosition(position);
-      }, 0);
-    }
+
+    let calcPosition = position + width - 100;
+
+    setTimeout(() => {
+      this.scrollService.setScrollPosition(calcPosition);
+    }, 0);
   }
 
   activeNav(imgRef: number) {
@@ -55,13 +55,21 @@ export class NavbarComponent  {
     }
   }
 
-
   checkUrl() {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
         this.showHeader =
           this.router.url === '/imprint' || this.router.url === '/privacy';
+         if(this.showHeader) {
+          this.isMainPage = false
+         }
+          
+          
       });
+  }
+
+  getDynamicStyle() {
+    return this.isDesktop && this.fullStyle && !this.isMainPage ? {'height': '100%'} : {};
   }
 }

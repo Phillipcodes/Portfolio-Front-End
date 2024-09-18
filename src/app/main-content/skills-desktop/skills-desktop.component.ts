@@ -23,14 +23,14 @@ export class SkillsDesktopComponent {
     this.icons = this.iconService.getJson() ;
   }
 
-  scrollToPosition(position:number) {
-   
-   
-    
+  scrollToPosition(position: number) {
+    let width = window.innerWidth;
+
+    let calcPosition = position + width - 100;
+
     setTimeout(() => {
-      this.scrollService.setScrollPosition(position);
+      this.scrollService.setScrollPosition(calcPosition);
     }, 0);
-  
   }
 }
 

@@ -65,7 +65,7 @@ section {
     width: 303px;
   }
   @include desktopMode {
-    @include size(935px,870px);
+    @include size(100vh,870px);
     background-size: contain;
     margin-top: 0;
     position: relative;

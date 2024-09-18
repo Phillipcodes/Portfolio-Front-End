@@ -6,6 +6,7 @@ header {
 }
 
 section {
+  
   @include flexBoxStandarts(flex, center, center);
   opacity: 0;
 }

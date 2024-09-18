@@ -22,14 +22,14 @@ constructor( private scrollService:ScrollService) {
 
 }
 
-scrollToPosition(position:number) {
-   
-   
-    
-  setTimeout(() => {
-    this.scrollService.setScrollPosition(position);
-  }, 0);
+scrollToPosition(position: number) {
+  let width = window.innerWidth;
 
+  let calcPosition = position + width - 100;
+
+  setTimeout(() => {
+    this.scrollService.setScrollPosition(calcPosition);
+  }, 0);
 }
 
 

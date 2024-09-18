@@ -15,6 +15,7 @@ export class IconService {
     { "path": "./assets/icons/git.png", "name": "Git" },
     { "path": "./assets/icons/scrum.png", "name": "Scrum" },
     { "path": "./assets/icons/material.png", "name": "Material" },
+    { "path": "./assets/icons/challangeme.png", "name": "Challange me", "challange": "I am always happy to learn new technologies,just tell me what you need" },
     { "path": "./assets/icons/challangeme.png", "name": "Challange me", "challange": "I am always happy to learn new technologies,just tell me what you need" }
   ];
 

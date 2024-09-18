@@ -1,6 +1,14 @@
+@import '../../../styles.scss';
+@import '../../../media-query.scss';
+
 section {
-    padding-left: 190px;
+    padding: 0 24px 0 24px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+   @include desktopMode {
+    padding-left: 190px;
+   }
 }
+a {
+    color: $highlightFontColor;
+  }

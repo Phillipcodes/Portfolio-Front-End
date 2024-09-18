@@ -25,21 +25,15 @@ constructor(private scrollService: ScrollService ) {
   
 }
 
-scrollToPosition(position:number) {
-  let width =  window.innerWidth 
-  if(width <990 && position == 3500) {
-   let calcPosition = position -100
-    setTimeout(() => {
-      this.scrollService.setScrollPosition(calcPosition);
-    }, 0);
-  
-  }else {
-    setTimeout(() => {
-      this.scrollService.setScrollPosition(position);
-    }, 0);
-  }
-}
+scrollToPosition(position: number) {
+  let width = window.innerWidth;
 
+  let calcPosition = position + width - 100;
+
+  setTimeout(() => {
+    this.scrollService.setScrollPosition(calcPosition);
+  }, 0);
+}
 
 switchLanguage(language: string) {
   this.translate.use(language);

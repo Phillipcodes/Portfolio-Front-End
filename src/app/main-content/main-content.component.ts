@@ -75,7 +75,7 @@ onScroll(event: Event): void {
   const container = this.scrollContainer.nativeElement;
   const scrollLeft = container.scrollLeft; 
 
- 
+
   
 if(scrollLeft >= 3100) {
   this.animiationOne = true
@@ -88,6 +88,7 @@ if(scrollLeft >= 3100) {
 @HostListener('window:scroll', ['$event'])
 onScrollMobile(event: Event): void {
   const scrollTop = window.scrollY;  
+
 
   if(scrollTop )
 

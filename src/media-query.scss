@@ -39,10 +39,15 @@
     @media (min-width: 600px)  { 
         @content
 }
-
-
-
 };
+@mixin mobile580px {
+    @media (min-width: 580px)  { 
+        @content
+}
+};
+
+
+
 
 @mixin mobileBetween600px-900px  {
     @media (width >= 600px) and (width <= 899px) {

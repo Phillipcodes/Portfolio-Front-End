@@ -2,13 +2,14 @@
 @import "../../../media-query.scss";
 
 section {
+  padding-top: 80px;
   @include desktopMode {
     display: flex;
     margin-right: 56px;
     margin-left: 104px;
     align-items: flex-end;
     margin-top: 15px;
-   
+   padding-top: 0;
   }
 }
 
