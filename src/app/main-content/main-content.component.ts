@@ -87,7 +87,7 @@ if(scrollLeft >= 3100) {
 
 @HostListener('window:scroll', ['$event'])
 onScrollMobile(event: Event): void {
-  const scrollTop = window.scrollY;  // Scrollposition auf der Y-Achse
+  const scrollTop = window.scrollY;  
 
   if(scrollTop )
 
@@ -102,7 +102,7 @@ onScrollMobile(event: Event): void {
 
 onScrollY(event: WheelEvent) {
   if(this.scrollyToX) {
-    // event.preventDefault();
+    event.preventDefault();
   
   
     
