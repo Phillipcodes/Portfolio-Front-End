@@ -52,7 +52,7 @@ section {
 }
 
 .person-pic {
-  background-image: url("../../../assets/person-pic/bewerbungsfoto_transperent_mirrored.png");
+  background-image: url('../../../assets/person-pic/mirro-trans-me.png');
   @include size(400px, 310px);
   background-position: bottom; /* Zentriert das Bild im Container */
   background-repeat: no-repeat;

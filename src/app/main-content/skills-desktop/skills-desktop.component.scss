@@ -30,6 +30,9 @@ section {
     }
 
     > div {
+      &:last-child {
+        display: none;
+      }
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -41,6 +44,8 @@ section {
     }
   }
 }
+
+
 
 .headline {
   margin-right: 43px;

@@ -19,7 +19,11 @@ export class IconService {
     { "path": "./assets/icons/challangeme.png", "name": "Challange me", "challange": "I am always happy to learn new technologies,just tell me what you need" }
   ];
 
+  constructor () {
+  
+  }
   getJson() {
     return this.icons;
   }
+ 
 }
