@@ -74,10 +74,7 @@ ngAfterViewInit() {
 onScroll(event: Event): void {
   const container = this.scrollContainer.nativeElement;
   const scrollLeft = container.scrollLeft; 
-  console.log( this.scrollContainer);
-  
 
-  console.log(scrollLeft);
  
   
 if(scrollLeft >= 3100) {

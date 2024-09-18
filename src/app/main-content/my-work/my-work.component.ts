@@ -27,7 +27,7 @@ export class MyWorkComponent {
 
   ngOnInit(): void {
     this.myWork = this.workService.getJson();
-    console.log(this.myWork);
+    
   }
   
   getClass(index: number) {
