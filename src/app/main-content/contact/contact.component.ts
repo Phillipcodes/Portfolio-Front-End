@@ -28,6 +28,8 @@ export class ContactComponent {
     message: '',
   };
 
+
+  
   markFormFieldAsTouched(form: NgForm) {
     Object.values(form.controls).forEach((control) => {
       control.markAsTouched();
@@ -103,7 +105,7 @@ export class ContactComponent {
       this.isMessageOut = true;
       setTimeout(() => {
         this.isMessageOut = false;
-      }, 4000); // Element wird nach 5 Sekunden wieder unsichtbar
+      }, 4000); 
     }
   }
 

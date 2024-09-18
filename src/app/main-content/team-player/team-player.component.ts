@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component,ElementRef, AfterViewInit, ViewChild, Input,inject } from '@angular/core';
 import { TranslationImgService } from '../interfaces/translation-img-service';
+import { ScrollService } from '../interfaces/scroll-service';
 
 
 @Component({
@@ -16,6 +17,23 @@ export class TeamPlayerComponent implements AfterViewInit {
   @ViewChild('refContainer') refContainer!: ElementRef;
   carousel = ['./assets/img/carousel-1.png','./assets/img/carousel-2.png','./assets/img/carousel-3.png']
   currentCarousel = this.carousel[0]
+
+constructor( private scrollService:ScrollService) {
+
+}
+
+scrollToPosition(position:number) {
+   
+   
+    
+  setTimeout(() => {
+    this.scrollService.setScrollPosition(position);
+  }, 0);
+
+}
+
+
+
   referencesTxt = [
     {
       name: 'Andre Veltens',

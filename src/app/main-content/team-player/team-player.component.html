@@ -1,25 +1,32 @@
 <section>
-<header *ngIf="!isDesktop">
-<h3>Need a teamplayer?</h3>
-<span>Here what my colleagues said about me</span>
-</header>
-<a href="#contact" *ngIf="isDesktop" ><img src="./assets/img/arrow-right.png" alt=""></a>
-<div class="headline" *ngIf="isDesktop"><img [src]="translationImgService.deImg[3]" alt=""></div>
-<div class="wrapper">
-<div #refContainer class="ref-container">
-    
-@for(ref of referencesTxt; track $index) {
-<div class="references" >
-    <span>{{ref.txt}}</span>
-    <div class="seperator"></div>
-    <div>
-        <h3>{{ref.name}}</h3>
-        <span class="project">{{ref.proj}}</span>
-    </div>
-</div>
-}
-</div>
-</div>
-<div *ngIf="!isDesktop" class="carousel"><img [src]="currentCarousel" alt=""></div>
+  <header *ngIf="!isDesktop">
+    <h3>Need a teamplayer?</h3>
+    <span>Here what my colleagues said about me</span>
+  </header>
 
+  <div class="arrow">
+    <a (click)="scrollToPosition(7000)" *ngIf="isDesktop"
+      ><img src="./assets/img/arrow-right.png" alt=""
+    /></a>
+  </div>
+  <div class="headline" *ngIf="isDesktop">
+    <img [src]="translationImgService.deImg[3]" alt="" />
+  </div>
+  <div class="wrapper">
+    <div #refContainer class="ref-container">
+      @for(ref of referencesTxt; track $index) {
+      <div class="references">
+        <span>{{ ref.txt }}</span>
+        <div class="seperator"></div>
+        <div>
+          <h3>{{ ref.name }}</h3>
+          <span class="project">{{ ref.proj }}</span>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <div *ngIf="!isDesktop" class="carousel">
+    <img [src]="currentCarousel" alt="" />
+  </div>
 </section>

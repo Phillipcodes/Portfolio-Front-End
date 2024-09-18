@@ -40,6 +40,7 @@ public isExternSite:boolean =false;
 public animiationOne:boolean =false;
 public animiationMobile:boolean =false;
 scrollyToX:boolean = false
+public scrollDistance:boolean = false;
 public burgerMenu = inject(BurgerMenuService);
 constructor(private router: Router, private scrollService: ScrollService ) {
 
@@ -62,7 +63,7 @@ ngAfterViewInit() {
 
 
 
-  console.log('ngAfterViewInit - scrollContainer:', this.scrollContainer);
+
   const container = this.scrollContainer.nativeElement;
   container.addEventListener('scroll', this.onScroll.bind(this));
   window.addEventListener('scroll', this.onScrollMobile.bind(this));
@@ -104,7 +105,7 @@ onScrollMobile(event: Event): void {
 
 onScrollY(event: WheelEvent) {
   if(this.scrollyToX) {
-    event.preventDefault();
+    // event.preventDefault();
   
   
     
@@ -124,16 +125,7 @@ updateViewportSize() {
  
 }
 
-scrollToSection() {
 
-console.log(this.scrollContainer);
-
-  this.scrollContainer.nativeElement.scrollTo({
-    top: 0,
-    left: 835,
-    behavior: 'smooth' // optional, für sanftes Scrollen
-  });
-}
 }
 
 

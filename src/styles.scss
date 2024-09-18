@@ -2,7 +2,7 @@
 @import "./media-query.scss";
 
 html {
- overflow: hidden;
+ 
   @include desktopMode {
 /* ===== Scrollbar CSS ===== */
   /* Firefox */

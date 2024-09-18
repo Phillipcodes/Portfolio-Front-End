@@ -12,7 +12,7 @@ import { ScrollService } from '../interfaces/scroll-service';
   templateUrl: './above-the-fold.component.html',
   styleUrl: './above-the-fold.component.scss'
 })
-export class AboveTheFoldComponent  implements AfterViewInit{
+export class AboveTheFoldComponent  {
   @Input() scrollToSection!: () => void;
   @Input() scrollContainer!: string;
   public translate = inject(TranslateService);
@@ -24,15 +24,22 @@ constructor(private scrollService: ScrollService ) {
   
   
 }
-scrollToPosition() {
-  const position = 835; // Zum Beispiel 500 Pixel
-  this.scrollService.setScrollPosition(position);
-}
 
-ngAfterViewInit(): void {
-
+scrollToPosition(position:number) {
+  let width =  window.innerWidth 
+  if(width <990 && position == 3500) {
+   let calcPosition = position -100
+    setTimeout(() => {
+      this.scrollService.setScrollPosition(calcPosition);
+    }, 0);
   
+  }else {
+    setTimeout(() => {
+      this.scrollService.setScrollPosition(position);
+    }, 0);
+  }
 }
+
 
 switchLanguage(language: string) {
   this.translate.use(language);

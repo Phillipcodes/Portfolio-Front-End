@@ -4,19 +4,19 @@
      <a href="#main"> <img class="ps-logo" src="./assets/icons/personal-logo.png" alt="" /></a>
     </div>
     <div *ngIf="isDesktop" class="navigation-line">
-      <a href="#me" (click)="scrollToPosition(835)" (click)="activeNav(0)">
+      <a href="#me" (click)="scrollToPosition(850)" (click)="activeNav(0)">
         <img [src]="translationImgService.currentImg[0]" alt="">
       </a>
       
-      <a href="#skills" (click)="activeNav(1)">
+      <a href="#skills" (click)="scrollToPosition(2100)" (click)="activeNav(1)">
         <img [src]="translationImgService.currentImg[1]" alt="">
       </a>
       
-      <a href="#myWork" (click)="activeNav(2)">
+      <a href="#myWork" (click)="scrollToPosition(3500)" (click)="activeNav(2)">
         <img [src]="translationImgService.currentImg[2]" alt="">
       </a>
       
-      <a href="#contact" (click)="activeNav(3)">
+      <a href="#contact" (click)="scrollToPosition(7000)" (click)="activeNav(3)">
         <img [src]="translationImgService.currentImg[3]" alt="">
       </a>
     </div>

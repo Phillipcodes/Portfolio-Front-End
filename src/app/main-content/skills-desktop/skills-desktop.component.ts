@@ -2,6 +2,7 @@ import { Component,inject } from '@angular/core';
 import { IconService } from '../interfaces/icon-service';
 import { CommonModule } from '@angular/common';
 import { TranslationImgService } from '../interfaces/translation-img-service';
+import { ScrollService } from '../interfaces/scroll-service';
 
 @Component({
   selector: 'app-skills-desktop',
@@ -15,10 +16,22 @@ export class SkillsDesktopComponent {
   public translationImgService = inject(TranslationImgService);
   icons:any[]=[]
   iconsStartFive:any[]=[]
-  constructor(private iconService:IconService) {
+  constructor(private iconService:IconService, private scrollService:ScrollService) {
 
   }
   ngOnInit(): void {
     this.icons = this.iconService.getJson() ;
   }
+
+  scrollToPosition(position:number) {
+   
+   
+    
+    setTimeout(() => {
+      this.scrollService.setScrollPosition(position);
+    }, 0);
+  
+  }
 }
+
+
