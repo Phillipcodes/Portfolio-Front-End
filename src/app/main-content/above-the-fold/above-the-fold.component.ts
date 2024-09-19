@@ -36,7 +36,6 @@ scrollToPosition(position: number) {
 }
 
 switchLanguage(language: string) {
-  debugger
   this.translate.use(language);
   this.changeLanguageImg(language)
  
@@ -46,7 +45,6 @@ switchLanguage(language: string) {
 
 
 changeLanguageImg(language:string) {
-  debugger
 if(language === 'de' && !this.translationImgService.isDe) {
  this.translationImgService.deImg = [...this.translationImgService.deImgCopy];
  this.translationImgService.currentImg = [...this.translationImgService.deImg]
