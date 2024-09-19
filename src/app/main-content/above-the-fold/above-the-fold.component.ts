@@ -36,23 +36,26 @@ scrollToPosition(position: number) {
 }
 
 switchLanguage(language: string) {
+  debugger
   this.translate.use(language);
   this.changeLanguageImg(language)
-  this.isSelected = !this.isSelected
+ 
  
 }
 
 
 
 changeLanguageImg(language:string) {
-if(language === 'de') {
+  debugger
+if(language === 'de' && !this.translationImgService.isDe) {
  this.translationImgService.deImg = [...this.translationImgService.deImgCopy];
- this.translationImgService.currentImg = [...this.translationImgService.currentImgEn]
+ this.translationImgService.currentImg = [...this.translationImgService.deImg]
 this.translationImgService.isDe =true;
-}  if (language === 'en') {
-  this.translationImgService.deImg = [...this.translationImgService.enImg];
+this.isSelected = !this.isSelected
+}  if (language === 'en' && this.translationImgService.isDe ) {
   this.translationImgService.currentImg = [...this.translationImgService.defaultImgState]
-  this.translationImgService.isDe =false;
+  this.translationImgService.isDe = false;
+  this.isSelected = !this.isSelected
 }
 
  }
