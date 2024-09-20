@@ -47,10 +47,11 @@ switchLanguage(language: string) {
 changeLanguageImg(language:string) {
 if(language === 'de' && !this.translationImgService.isDe) {
  this.translationImgService.deImg = [...this.translationImgService.deImgCopy];
- this.translationImgService.currentImg = [...this.translationImgService.deImg]
+ this.translationImgService.currentImg = [...this.translationImgService.currentImgDeCopy]
 this.translationImgService.isDe =true;
 this.isSelected = !this.isSelected
 }  if (language === 'en' && this.translationImgService.isDe ) {
+  this.translationImgService.deImg = [...this.translationImgService.enImgCopy];
   this.translationImgService.currentImg = [...this.translationImgService.defaultImgState]
   this.translationImgService.isDe = false;
   this.isSelected = !this.isSelected
