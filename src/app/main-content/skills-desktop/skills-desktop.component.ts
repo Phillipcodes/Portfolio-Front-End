@@ -3,16 +3,18 @@ import { IconService } from '../interfaces/icon-service';
 import { CommonModule } from '@angular/common';
 import { TranslationImgService } from '../interfaces/translation-img-service';
 import { ScrollService } from '../interfaces/scroll-service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills-desktop',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './skills-desktop.component.html',
   styleUrl: './skills-desktop.component.scss'
 })
 
 export class SkillsDesktopComponent {
+  
   public translationImgService = inject(TranslationImgService);
   icons:any[]=[]
   iconsStartFive:any[]=[]

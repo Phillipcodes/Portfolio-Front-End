@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component,ElementRef, AfterViewInit, ViewChild, Input,inject } from '@angular/core';
 import { TranslationImgService } from '../interfaces/translation-img-service';
 import { ScrollService } from '../interfaces/scroll-service';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-team-player',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './team-player.component.html',
   styleUrl: './team-player.component.scss',
 })
@@ -37,19 +38,19 @@ scrollToPosition(position: number) {
   referencesTxt = [
     {
       name: 'Andre Veltens',
-      proj: 'Project Join',
-      txt: 'Phillip proved to be a reliable and motivated partner during the project work. Thanks to our determined and efficient collaboration, we were able to achieve our project goals in a brief period of time.'
+      proj: 'REFERENCES.colleagueDA',
+      txt: 'REFERENCES.Andre'
 
     },
     {
-      name: 'placeholder2',
-      proj: 'ell pollo2',
-      txt: 'nice mate lovely to work with even in hard crunch times a absolut monster2',
+      name: 'Ricardo Pinto',
+      proj: 'REFERENCES.colleagueDA',
+      txt: 'REFERENCES.Ricardo',
     },
     {
-      name: 'placeholder3',
-      proj: 'ell pollo3',
-      txt: 'nice mate lovely to work with even in hard crunch times a absolut monster3',
+      name: 'Juliette Lindecke  ',
+      proj: 'REFERENCES.colleague',
+      txt: 'REFERENCES.Juliette',
     },
   ];
 

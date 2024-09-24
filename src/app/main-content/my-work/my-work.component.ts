@@ -6,7 +6,7 @@ import { TranslateService ,TranslateModule} from '@ngx-translate/core';
 @Component({
   selector: 'app-my-work',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './my-work.component.html',
   styleUrl: './my-work.component.scss',
 })

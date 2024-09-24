@@ -1,7 +1,7 @@
 <section>
   <header *ngIf="!isDesktop">
-    <h3>Need a teamplayer?</h3>
-    <span>Here what my colleagues said about me</span>
+    <h3>{{"REFERENCES.mobileHeadline" | translate}}</h3>
+    <span>{{"REFERENCES.colleagues" |translate}}</span>
   </header>
 
   <div class="arrow">
@@ -16,11 +16,11 @@
     <div #refContainer class="ref-container">
       @for(ref of referencesTxt; track $index) {
       <div class="references">
-        <span>{{ ref.txt }}</span>
+        <span>{{ ref.txt | translate }}</span>
         <div class="seperator"></div>
         <div>
           <h3>{{ ref.name }}</h3>
-          <span class="project">{{ ref.proj }}</span>
+          <span class="project">{{ ref.proj |translate}}</span>
         </div>
       </div>
       }

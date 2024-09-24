@@ -1,14 +1,76 @@
 {
- "HOME":{
-  "Welcome": "hello",
-    "WhyMeTxt": " I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make ma a valuable memberof your team."
-    
-  
+  "ME": {
+    "WhyMeTxt": " I am motivated to continuously learn new technologies and develop myself. My ability to solve complex problems and my passion for programming make ma a valuable memberof your team.",
+    "location": "located in Duesseldorf",
+    "remote": "open to work remote",
+    "relocate": "open to reloacte",
+    "headline": "I am :",
+     "button" :"Contact me"
   },
   "IMPRINT": {
     "Title": "Imprint",
     "Contact": "Contact",
     "Phone": "Phone",
     "Source": "Source"
+  },
+  "RESPONSEMESSAGE": {
+    "message": " Thanks for your message. I’ll respond shortly."
+  },
+
+  "SKILLSET": {
+    "main": "Because there is so much to discover in software development and new ideas are constantly emerging, I feel particularly comfortable in this field. I look forward to continuously learning new things and taking on new challenges.",
+    "challange": " am always happy to learn new technonogies,just tell me what you need."
+  },
+
+  "BURGERMENU": {
+    "whyMe": "Why me",
+    "skills": "My skill set",
+    "myWork": "My work",
+    "contact": "Contact me"
+  },
+
+  "MYWORK": {
+    "about": "Task manager inspired by the Kanban system, designed for creating and organizing tasks. Optimal use through the drag-and-drop feature, which allows for easy assignment of tasks and setting of categories",
+    "learned": "I learned a variety of skills. My JavaScript knowledge was tested in combination with Firebase, which gave me a whole new understanding of how programming works. Additionally, I learned to organize myself within a team and take responsibility for deadlines.",
+    "aboutHeadline": "About the Project",
+    "tecHeadline": "Technologies i have used",
+    "learnHedline": "What i have learned",
+    "aboutSecond" : "A jump-and-run game inspired by popular titles like Super Mario, implemented using object-oriented programming (OOP). Control Pepe, jump through the level, and defeat the final boss to win!",
+    "learnedSecond" : "I have learned the application of OOP and class-based programming to develop a well-designed game with complex tasks such as collision detection.",
+    "currentWorkHeadline": "Ongoing Projects",
+    "currentWork": "Currently, I am working on a simple CRM system with Angular.",
+    "button" : "Let´s Talk",
+    "showMore" : "Show me more",
+    "showLess": "Show me less"
+  },
+  "REFERENCES": {
+    "Andre": "Phillip proved to be a reliable and motivated partner during the project work. Thanks to our determined and efficient collaboration, we were able to achieve our project goals in a brief period of time.",
+    "Ricardo": "I enjoyed working with Phillip his dedicated, helpful, and reliable nature made every collaboration a positive experience.",
+    "Juliette": "Phillip is a team player who works meticulously and is always punctual. His communicative nature makes collaboration enjoyable, and he pursues his goals with passion.",
+    "colleagueDA": "DA Kollege",
+    "colleague": "Kollegin",
+    "mobileHeadline": "Need a teamplayer?",
+    "colleagues" : "Here what my colleagues said about me"
+  },
+  "CONTACTFIELD" : {
+    "nameField": "Name is required",
+    "emailField" : "Email is required",
+    "textareaField" : "Message is required",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "policy": "privacy policy",
+    "firstHalfPolicy" : "I've read the",
+    "secondHalfPolicy" : "and agree to the processing of my data as outlined.",
+    "send" : "Send",
+    "errorText" : "Please accept the privacy policy.",
+     "mobileHeadlineWorkTogehter" : "Let us work together.",
+     "MobileText" : "If you are looking for someone for your next project, whether it’s a business app or in another direction, and you value clean code as well as a committed developer who is eager to continuously improve and learn new things, then I am the right person for you."
+  },
+  "PREFOOTERDESKTOP" : {
+    "headline" : "Let us work together.",
+    "mainText": "If you are looking for someone for your next project, whether it’s a business app or in another direction, and you value clean code as well as a committed developer who is eager to continuously improve and learn new things, then I am the right person for you.",
+    "legalNotice": "Imprint",
+    "policy": "Privacy policy"
   }
 }

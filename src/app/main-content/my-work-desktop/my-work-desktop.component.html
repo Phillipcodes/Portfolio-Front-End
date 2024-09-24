@@ -20,16 +20,16 @@
         "
               alt=""
             />
-            <h3>About the Project</h3>
+            <h3>{{"MYWORK.aboutHeadline" |translate}}</h3>
           </div>
-          <span>{{ item.about }}</span>
+          <span>{{item.about |translate}}</span>
           <div class="sub-headline">
             <img
               src="./assets/img/bulletpoint25.png
         "
               alt=""
             />
-            <h3>Technologies i have used</h3>
+            <h3>{{"MYWORK.tecHeadline" |translate}}</h3>
           </div>
           <span class="word-space">{{ item.tec }}</span>
         </div>
@@ -52,9 +52,9 @@
       "
             alt=""
           />
-          <h3>What i have learned</h3>
+          <h3>{{"MYWORK.learnHeadline" |translate}}</h3>
         </div>
-        <span class="width">{{ item.learned }}</span>
+        <span class="width">{{ item.learned | translate }}</span>
       </div>
     </div>
     <div></div>
@@ -64,15 +64,13 @@
     <div class="on-going-container">
       <div class="on-going">
         <img src="./assets/img/3-desktop.png" alt="" />
-        <h3>Ongoing Projects</h3>
+        <h3>{{"MYWORK.currentWorkHeadline" |translate}}</h3>
       </div>
       <span
-        >I am currently working on developing an online shop for pet foods. This
-        is for me both exciting and challenging. In my work the key to success
-        lies in a good planning and execution.</span
+        >{{"MYWORK.currentWork" |translate}}</span
       >
       <div class="btn-container">
-        <button class="live-test-btn">Let´s Talk</button>
+       <a href="mailto:phillip@phillip-marcel-sauer.com"> <button class="live-test-btn">{{"MYWORK.button" |translate}}</button></a>
       </div>
     </div>
   </div>

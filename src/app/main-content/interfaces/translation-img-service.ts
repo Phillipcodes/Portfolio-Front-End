@@ -34,4 +34,10 @@ export class TranslationImgService {
       './assets/img/contactsMe-nav.png',]
     currentImgDeCopy:string[] = ['./assets/img/Wiesoich-nav.svg','./assets/img/skills-nav.png','./assets/img/Meine_Arbeiten-nav.svg','./assets/img/kontak-nav.svg']
     isActiveImgDe:string [] = ['./assets/img/warum_ich-0.png','./assets/img/Skills-nav-0.png','./assets/img/meineArbeiten-nav-0.svg','./assets/img/kontak-nav-0.svg']
+
+
+
+    mobileImgEn: string [] = ["./assets/img/whyMemobile.svg","./assets/img/myskillset.png", './assets/img/MyWork.svg','./assets/img/contactme.svg']
+    mobieImgDe : string [] = []
+    currentImgMobile : string [] = []
 }

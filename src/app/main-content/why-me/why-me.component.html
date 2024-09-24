@@ -3,17 +3,17 @@
     <img class="mobile-img" src="./assets/img/whyMemobile.svg" alt="" />
     <img class="desktop-img" [src]="translationImgService.deImg[0]" alt="" />
     <p class="mobile-txt">
-      {{ "HOME.WhyMeTxt" | translate }}
+      {{ "ME.WhyMeTxt" | translate }}
     </p>
   </div>
   <div class="section-wrapper">
     <div class="desktop-txt">
       <p>
-        {{ "HOME.WhyMeTxt" | translate }}
+        {{ "ME.WhyMeTxt" | translate }}
       </p>
     </div>
     <div class="i-am-section">
-      <h1>I am :</h1>
+      <h1>{{"ME.headline" | translate}}</h1>
       <div class="image-wrapper">
         <div class="image-container">
           <img
@@ -28,7 +28,7 @@
           />
           <div class="placetaker-second"></div>
           <div class="txt-with-icon">
-            <p>open to relocate</p>
+            <p>{{"ME.relocate" | translate}}</p>
           </div>
         </div>
         <div class="image-container">
@@ -44,7 +44,7 @@
           />
           <div class="placetaker-second"></div>
           <div class="txt-with-icon">
-            <p>open to work remote</p>
+            <p>{{"ME.remote" | translate}}</p>
           </div>
         </div>
 
@@ -62,13 +62,13 @@
           />
           <div class="placetaker"></div>
           <div class="txt-with-icon">
-            <p>located in Duesseldorf</p>
+            <p>{{"ME.location" | translate}}</p>
           </div>
         </div>
       </div>
       <div class="contact-me-btn">
         <a href="mailto:phillip@phillip-marcel-sauer.com"
-          ><button>Contact me</button></a
+          ><button>{{"ME.button" |translate}}</button></a
         >
       </div>
     </div>

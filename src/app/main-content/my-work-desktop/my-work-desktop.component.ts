@@ -20,6 +20,10 @@ export class MyWorkDesktopComponent {
     
   }
 
+  objectKeys(obj: any): string[] {
+    return Object.keys(obj);
+  }
+
   getClass(index: number) {
     return this.animationOne ? `animate${index}` : 'animateBack';
   }

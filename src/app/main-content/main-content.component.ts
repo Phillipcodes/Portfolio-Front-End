@@ -39,7 +39,7 @@ public isDesktop:boolean = false;
 public isExternSite:boolean =false;
 public animiationOne:boolean =false;
 public animiationMobile:boolean =false;
-scrollyToX:boolean = false
+scrollyToX:boolean = false;
 public scrollDistance:boolean = false;
 public burgerMenu = inject(BurgerMenuService);
 constructor(private router: Router, private scrollService: ScrollService ) {
@@ -104,15 +104,9 @@ onScrollMobile(event: Event): void {
 onScrollY(event: WheelEvent) {
   if(this.scrollyToX) {
     event.preventDefault();
-  
-  
-    
     const scrollSpeed = 3;
-  
-  
     const deltaX = event.deltaY * scrollSpeed;
-  
-    this.scrollContainer.nativeElement.scrollBy(deltaX, 1);
+    this.scrollContainer.nativeElement.scrollBy(deltaX, 0);
   }
   } 
 updateViewportSize() {
@@ -122,8 +116,6 @@ updateViewportSize() {
   this.scrollyToX = width >899
  
 }
-
-
 }
 
 

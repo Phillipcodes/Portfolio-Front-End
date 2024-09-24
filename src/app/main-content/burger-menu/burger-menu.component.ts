@@ -46,7 +46,7 @@ export class BurgerMenuComponent {
 
   switchLanguage(language: string) {
     this.translate.use(language);
-    console.log(language);
+    
     this.changeLanguageImg(language);
     this.isSelected = !this.isSelected
   }
@@ -60,5 +60,7 @@ export class BurgerMenuComponent {
     if (language === 'en') {
       this.translationImgService.deImg = [...this.translationImgService.enImg];
     }
+    this.BurgerMenuService.close(); 
   }
+ 
 }

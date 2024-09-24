@@ -1,13 +1,74 @@
 {
- "HOME":{
-  "Welcome": "hallo",
-  "WhyMeTxt": "Das hier ist ein deutsch text"
-  
+  "ME": {
+    "WhyMeTxt": "Ich bin ein passionierter Frontend-Entwickler, stets auf der Suche nach neuen Herausforderungen, die mein Wissen fordern und erweitern. Ich wäre begeistert davon, meine Fähigkeiten in Ihrem Team einzubringen und gemeinsam an spannenden Projekten zu arbeiten.",
+    "location": "Standort Düsseldorf",
+    "remote": "Offen für Remote-Arbeit",
+    "relocate": "Umzugsbereit",
+    "headline": "Ich bin :",
+    "button": "Kontaktiere mich"
   },
-  "IMPRINT": {  
+  "IMPRINT": {
     "Title": "Impressum",
     "Contact": "Kontakt",
     "Phone": "Telefon",
     "Source": "Quelle"
+  },
+  "RESPONSEMESSAGE": {
+    "message": "Vielen Dank für Ihre Nachricht, ich werde mich in Kürze bei Ihnen melden."
+  },
+  "SKILLSET": {
+    "main": "Weil es in der Softwareentwicklung so viel zu entdecken gibt und ständig neue Ideen entstehen, fühle ich mich in diesem Bereich besonders wohl. Ich freue mich darauf, immer wieder Neues zu lernen und mich neuen Herausforderungen zu stellen.",
+    "challange": "Nicht gefunden, wonach Sie suchen? Ich freue mich darauf, etwas Neues für Sie zu lernen und umzusetzen."
+  },
+
+  "BURGERMENU": {
+    "whyMe": "Wieso ich",
+    "skills": "Skills",
+    "myWork": "Meine Arbeiten",
+    "contact": "Kontakt"
+  },
+  "MYWORK": {
+    "about": "Task-Manager inspiriert vom Kanban-System, entwickelt zum Erstellen und Organisieren von Aufgaben. Optimale Nutzung durch die Drag and Drop Funktion, die es ermöglicht, Aufgaben einfach zuzuweisen und Kategorien festzulegen.",
+    "learned": "Ich habe eine Vielzahl an Fähigkeiten erlernt. Mein Wissen in JavaScript wurde in Kombination mit Firebase auf die Probe gestellt, was mir ein völlig neues Verständnis davon gegeben hat, wie Programmierung funktioniert. Zudem habe ich gelernt, mich innerhalb eines Teams zu organisieren und Verantwortung für Deadlines zu übernehmen.",
+    "aboutHeadline": "Über das Projekt",
+    "tecHeadline": "Verwendete Technologien",
+    "learnHeadline": "Was ich gelernt habe",
+    "aboutSecond": "Ein Jump-and-Run-Spiel, inspiriert von populären Titeln wie Super Mario, umgesetzt mit objektorientierter Programmierung (OOP). Steuere Pepe und besiege den Endboss, um zu gewinnen!  ",
+    "learnedSecond": "Ich habe die Anwendung von OOP und klassenbasierter Programmierung erlernt, um ein durchdachtes Spiel mit komplexen Aufgaben wie Kollisionserkennung zu entwickeln",
+    "currentWorkHeadline": "Aktuelles Projekt",
+    "currentWork": "Derzeit arbeite ich an der Entwicklung eines einfachen CRM-System mit Angular.",
+    "button": "Lass uns Reden",
+    "showMore": "Mehr Anzeigen",
+    "showLess": "Weniger Anzeigen"
+  },
+  "REFERENCES": {
+    "Andre": "Phillip erwies sich während der Projektarbeit als zuverlässiger und motivierter Partner. Dank unserer effizienten Zusammenarbeit erreichten wir unsere Ziele in kurzer Zeit.",
+    "Ricardo": "Ich arbeitete sehr gerne mit Phillip zusammen; seine engagierte, hilfsbereite und zuverlässige Art machte jede Zusammenarbeit zu einer positiven Erfahrung.",
+    "Juliette": "Phillip ist teamfähig, arbeitet sorgfältig und ist stets pünktlich. Seine kommunikative Art macht die Zusammenarbeit angenehm, und er verfolgt seine Ziele mit Leidenschaft.",
+    "colleagueDA": "DA Kollege",
+    "colleague": "Kollegin",
+    "mobileHeadline": "Brauchen Sie einen Teamplayer",
+    "colleagues" : "Hier sehen Sie , was meine Kollegen über mich sagen."
+  },
+  "CONTACTFIELD": {
+    "nameField": "Name ist erforderlich",
+    "emailField": "Email ist erforderlich",
+    "textareaField": "Nachricht ist erforderlich",
+    "name": "Dein Name",
+    "email": "Deine Email",
+    "message": "Deine Nachricht",
+    "policy": "Datenschutzrichtlinie",
+    "firstHalfPolicy": "Ich habe die",
+    "secondHalfPolicy": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "send": "Senden",
+    "errorText": "Bitte akzeptieren Sie die Datenschutzrichtlinien.",
+    "mobileHeadlineWorkTogehter": "Lass uns zusammenarbeiten.",
+    "MobileText": "Wenn ihr jemanden für euer nächstes Projekt sucht, sei es eine Business-App oder in einer anderen Richtung, und Wert auf Clean Code legt sowie auf einen engagierten Entwickler, der bereit ist, sich stetig weiterzuentwickeln und Neues zu lernen, dann bin ich genau der Richtige für euch."
+  },
+  "PREFOOTERDESKTOP": {
+    "headline": "Lass uns zusammenarbeiten.",
+    "mainText": "Wenn ihr jemanden für euer nächstes Projekt sucht, sei es eine Business-App oder in einer anderen Richtung, und Wert auf Clean Code sowie einen engagierten Entwickler legt, der bereit ist, sich weiterzuentwickeln und Neues zu lernen, dann bin ich der Richtige für euch.",
+    "legalNotice": "Impressum",
+    "policy": "Datenschutzrichtlinien"
   }
 }
