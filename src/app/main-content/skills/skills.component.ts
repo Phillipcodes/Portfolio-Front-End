@@ -1,7 +1,8 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,inject } from '@angular/core';
 import { AppComponent } from '../../app.component';
 import { IconService } from './../interfaces/icon-service';
 import { TranslateModule } from '@ngx-translate/core';
+import { TranslationImgService } from '../interfaces/translation-img-service';
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -10,7 +11,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-
+  public translationImgService = inject(TranslationImgService);
   icons:any[]=[]
 
 constructor(private iconService:IconService) {

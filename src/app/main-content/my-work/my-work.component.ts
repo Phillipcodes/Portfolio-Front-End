@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component,inject,Input } from '@angular/core';
 import { WorkItem, WorkService } from './../interfaces/work-service';
 import { TranslateService ,TranslateModule} from '@ngx-translate/core';
+import { TranslationImgService } from '../interfaces/translation-img-service';
 
 @Component({
   selector: 'app-my-work',
@@ -13,7 +14,7 @@ import { TranslateService ,TranslateModule} from '@ngx-translate/core';
 export class MyWorkComponent {
   @Input() animationMobile!: boolean;
   isListOpen: boolean[] = [false, false];
-
+  public translationImgService = inject(TranslationImgService);
   myWork: WorkItem[] = [];
 
   constructor(

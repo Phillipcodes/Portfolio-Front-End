@@ -1,6 +1,6 @@
 <section>
   <div>
-    <img class="mobile-img" src="./assets/img/whyMemobile.svg" alt="" />
+    <img class="mobile-img" [src]="translationImgService.currentImgMobile[0]" alt="" />
     <img class="desktop-img" [src]="translationImgService.deImg[0]" alt="" />
     <p class="mobile-txt">
       {{ "ME.WhyMeTxt" | translate }}

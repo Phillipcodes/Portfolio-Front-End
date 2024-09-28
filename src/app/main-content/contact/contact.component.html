@@ -3,7 +3,7 @@
   <div *ngIf="!isDesktop" class="pad-info-box">
     
     <header>
-      <img src="./assets/img/contactme.svg" alt="" />
+      <img [src]="translationImgService.currentImgMobile[3]" alt="" />
       <h4>{{"CONTACTFIELD.mobileHeadlineWorkTogehter" | translate}}</h4>
     </header>
     <span

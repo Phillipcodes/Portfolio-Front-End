@@ -53,12 +53,12 @@ export class BurgerMenuComponent {
 
   changeLanguageImg(language: string) {
     if (language === 'de') {
-      this.translationImgService.deImg = [
-        ...this.translationImgService.deImgCopy,
+      this.translationImgService.currentImgMobile = [
+        ...this.translationImgService.mobielImgDe,
       ];
     }
     if (language === 'en') {
-      this.translationImgService.deImg = [...this.translationImgService.enImg];
+      this.translationImgService.currentImgMobile = [...this.translationImgService.mobileImgEn];
     }
     this.BurgerMenuService.close(); 
   }

@@ -223,11 +223,11 @@ section {
 }
 }
 
-@media (height >= 1100px) {
-  .person-pic {
-    width: clamp(870px, 100vh, 1800px);
-  }
-}
+// @media (height >= 1100px) {
+//   .person-pic {
+//     width: clamp(870px, 100vh, 1800px);
+//   }
+// }
 .selected {
   color: $highlightFontColor;
 }

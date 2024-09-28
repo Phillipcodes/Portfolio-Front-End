@@ -38,6 +38,6 @@ export class TranslationImgService {
 
 
     mobileImgEn: string [] = ["./assets/img/whyMemobile.svg","./assets/img/myskillset.png", './assets/img/MyWork.svg','./assets/img/contactme.svg']
-    mobieImgDe : string [] = []
-    currentImgMobile : string [] = []
+    mobielImgDe : string [] = ["./assets/img/mobileHeadlineWiesoIch.svg","./assets/img/meinskillSetMobileHeadline.svg","./assets/img/meineArbeitenMobileHeadline.svg","./assets/img/KontaktieremchMobileHEadline.svg"]
+    currentImgMobile : string [] = ["./assets/img/mobileHeadlineWiesoIch.svg","./assets/img/meinskillSetMobileHeadline.svg","./assets/img/meineArbeitenMobileHeadline.svg","./assets/img/KontaktieremchMobileHEadline.svg"]
 }

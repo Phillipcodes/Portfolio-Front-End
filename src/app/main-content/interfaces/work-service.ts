@@ -40,7 +40,7 @@ export class WorkService {
           path: './assets/img/elpollo.png',
           number: './assets/img/2.png',
           numberDesktop: './assets/img/2-desktop.png',
-          project: 'Project Ell Pollo Loco' ,
+          project: 'Project El Pollo Loco' ,
           git: 'https://github.com/Phillipcodes/El_pollo_loco.git',
           liveTest: 'https://elpollo.phillip-marcel-sauer.com/'
         },
