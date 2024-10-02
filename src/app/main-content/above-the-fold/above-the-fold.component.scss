@@ -69,6 +69,10 @@ section {
     background-size: cover;
     margin-top: 0;
     position: relative;
+    @include heightDesktopOver1300 {
+      width: clamp(850px, 50vw + 100px, 1675px);
+    
+    }
   }
   @include mobileBetween600px-900px {
     width: clamp(310px, calc(100vw - 150px), 490px);

@@ -52,4 +52,10 @@
     @media (width >= 600px) and (width <= 899px) {
         @content
     }
+};
+
+@mixin heightDesktopOver1300  {
+    @media (height >= 1300px)  {
+        @content
+    }
 }
