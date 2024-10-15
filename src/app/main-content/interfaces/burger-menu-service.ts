@@ -13,6 +13,9 @@ export class BurgerMenuService {
       this.isAnimation = !this.isAnimation;
   
       setTimeout(() => {
+        if(this.isAnimation) {
+          this.close()
+        }
         this.menuClosedAtStart = false;
         this.menuIsOpen = !this.menuIsOpen;
       }, 100);
