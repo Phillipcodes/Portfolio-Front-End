@@ -152,3 +152,17 @@ header {
     }
 }
 
+@media (height <= 901px) {
+  .navigation-line {
+    img {
+      width: 20px;
+      
+    }
+   .fit-size {
+    
+      width:30px;
+    
+   }
+  }
+}
+

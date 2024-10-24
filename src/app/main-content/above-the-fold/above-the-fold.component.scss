@@ -78,7 +78,15 @@ section {
     width: clamp(310px, calc(100vw - 150px), 490px);
     height: clamp(400px, calc(100vh - 10px), 590px);
   }
+
 }
+
+@media (height <= 801px) {
+  .person-pic {
+    background-size: contain;
+  }
+}
+
 
 .front {
   @include size(361px, 100%);
