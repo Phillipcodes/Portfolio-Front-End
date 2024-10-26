@@ -9,7 +9,9 @@ section {
     gap: 40px;
     margin-left: 104px;
     padding-top: 0px;
-  
+    @media(height <= 800px) {
+      margin-bottom: 0;
+    }
   }
 }
 

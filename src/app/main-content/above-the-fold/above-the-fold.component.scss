@@ -144,6 +144,9 @@ section {
     animation: rotate 2s linear infinite; /* Start rotation on hover */
    }
   }
+  @media(height <= 700px) {
+    margin-top: 5px;
+  }
 }
 
 @keyframes rotate {
@@ -235,11 +238,7 @@ section {
 }
 }
 
-// @media (height >= 1100px) {
-//   .person-pic {
-//     width: clamp(870px, 100vh, 1800px);
-//   }
-// }
+
 .selected {
   color: $highlightFontColor;
 }

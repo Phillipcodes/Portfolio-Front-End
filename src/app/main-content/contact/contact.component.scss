@@ -56,6 +56,8 @@ form {
       opacity: 40%;
       color: #d3ed97;
     }
+
+    
   }
   input:not(.submit-btn) {
     padding: 21px 26px;
@@ -77,6 +79,9 @@ form {
     @include desktopMode {
       width: 456px;
       height: 194px;
+      @media(height <= 650px) {
+      min-height: unset;
+      }
     }
   }
   span {

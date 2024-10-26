@@ -12,16 +12,40 @@
   }
 }
 
+@media (height <= 600px) {
+  .work-container {
+    max-height: 500px;
+    overflow-y: scroll;
+    margin-top: 15px;
+
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+
+  .main-headline {
+    margin-top: 15px;
+  }
+}
+
 section {
   display: flex;
   min-width: 3000px;
   gap: 40px;
-  
 }
 
 .main-headline {
-    height: 55%;
-    margin-left: 104px;
+  height: 55%;
+  margin-left: 104px;
 }
 
 .headline {
@@ -63,7 +87,7 @@ section {
 }
 
 .main-content {
-    display: flex;
+  display: flex;
   > span {
     width: 366px;
     display: block;
@@ -84,37 +108,36 @@ span {
 }
 
 .btn-img-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    gap: 27px;
-    >img {
-        @include size(203px,337px);
-        border-radius: 30px;
-        filter: saturate(0.3);
-        
-    }
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 27px;
+  > img {
+    @include size(203px, 337px);
+    border-radius: 30px;
+    filter: saturate(0.3);
+  }
 }
 
 .btn-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
 
 .git-btn {
-    @include size(43px,106px);
-    border-radius: 30px;
+  @include size(43px, 106px);
+  border-radius: 30px;
 }
 .live-test-btn {
-    @include size(43px,118px);
-    border-radius: 30px;
+  @include size(43px, 118px);
+  border-radius: 30px;
 }
 
 .txt-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .on-going-container {
@@ -124,7 +147,6 @@ span {
   width: 367px;
   button {
     margin-top: 24px;
-    
   }
 }
 
@@ -132,15 +154,14 @@ span {
   display: flex;
   align-items: center;
   gap: 18px;
-  >img {
-    @include size(58px,31px)
+  > img {
+    @include size(58px, 31px);
   }
 
-  >h3 {
+  > h3 {
     font-size: 30px;
     color: $highlightFontColor;
   }
- 
 }
 
 .btn-container {
@@ -149,23 +170,18 @@ span {
 }
 .height-100 {
   height: 60%;
-
 }
 .arrow {
-margin-top: 220px;
+  margin-top: 220px;
   margin-left: 104px;
 }
 
 .animate0 {
-  
   animation: slideUp 1.5s ease-out forwards; /* Animation für den Vornamen */
-  
 }
 .animate1 {
-  
   animation: slideUp 1.5s ease-out forwards; /* Animation für den Vornamen */
-  animation-delay: 1s;    
-  
+  animation-delay: 1s;
 }
 
 .animateBack {
@@ -181,7 +197,6 @@ margin-top: 220px;
     opacity: 1;
     transform: translateY(0);
   }
-
 }
 
 @keyframes slideUpReverse {
@@ -195,6 +210,8 @@ margin-top: 220px;
   }
   100% {
     opacity: 0;
-    transform: translateY(100px); /* Sicherstellen, dass das Element am Ende nicht auf der Originalposition ist */
+    transform: translateY(
+      100px
+    ); /* Sicherstellen, dass das Element am Ende nicht auf der Originalposition ist */
   }
 }

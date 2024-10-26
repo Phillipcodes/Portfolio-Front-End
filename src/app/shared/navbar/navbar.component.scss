@@ -23,8 +23,13 @@ header {
 .ps-logo {
   @include size(64px,64px);
   @include desktopMode {
-    @include size(110px, 130px)
+    @include size(110px, 130px);
+    @media(height <= 700px) {
+      width: 100px;
+      height: 85px;
+    }
   }
+ 
 }
 
 @keyframes slideDown {
@@ -150,19 +155,38 @@ header {
       filter: brightness(0) saturate(100%)  invert(91%) sepia(2%) saturate(1250%) hue-rotate(312deg) brightness(109%) contrast(102%);
       }
     }
+    @media(height <= 700px) {
+      margin-top: 0;
+      gap: 5px;
+    }
 }
 
 @media (height <= 901px) {
   .navigation-line {
     img {
-      width: 20px;
+      width: 15px;
       
     }
+    
+   
+
    .fit-size {
     
-      width:30px;
+      width:25px;
     
    }
   }
 }
 
+@media (height <= 601px) {
+  .navigation-line {
+    img {
+      width: 13px;
+      
+    }
+  }}
+
+.logo {
+  display: flex;
+  justify-self: center;
+}
