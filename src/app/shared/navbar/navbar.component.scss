@@ -187,6 +187,8 @@ header {
   }}
 
 .logo {
+  @include desktopMode {
   display: flex;
   justify-self: center;
+  }
 }
