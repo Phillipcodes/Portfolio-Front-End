@@ -1,16 +1,12 @@
-@import '../../media-query.scss';
+@import "../../media-query.scss";
 
 .bg-g {
-    cursor: default;
-    @include desktopMode {
-        display: flex;
-        height: 100vh;
-        overflow-y: hidden;
-        align-items: center;
-        overflow-x: scroll;
-        
-    }
-    
+  cursor: default;
+  @include desktopMode {
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+    align-items: center;
+    overflow-x: scroll;
+  }
 }
-
-
