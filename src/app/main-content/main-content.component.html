@@ -1,8 +1,6 @@
 
     <div #scrollContainer   class="bg-g" >
-    
     <!-- <app-navbar [isDesktop]="isDesktop"></app-navbar> -->
-    
     <app-above-the-fold id="main" [isDesktop]="isDesktop"   ></app-above-the-fold>
     <app-why-me id="me" [isDesktop]="isDesktop"></app-why-me>
     <app-skills id="skillsMobile"  *ngIf="isMobile"></app-skills>
@@ -14,5 +12,3 @@
     <app-pre-footer-desktop *ngIf="isDesktop"></app-pre-footer-desktop>
     <app-pre-footer *ngIf="isMobile"></app-pre-footer>
     </div>
-
-
