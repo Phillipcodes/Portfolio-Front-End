@@ -126,6 +126,13 @@ button {
   
 }
 
+.animate2 {
+  
+  animation:  slideFromLeft 1.5s ease-out forwards; /* Animation für den Vornamen */
+  animation-delay: 2s;    
+  
+}
+
 .animateBack {
   animation: slideLeftReverse 1.5s ease-out forwards;
 }
