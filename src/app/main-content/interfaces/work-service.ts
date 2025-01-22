@@ -44,6 +44,19 @@ export class WorkService {
           git: 'https://github.com/Phillipcodes/El_pollo_loco.git',
           liveTest: 'https://elpollo.phillip-marcel-sauer.com/'
         },
+        {
+          about:
+            'MYWORK.aboutThird',
+          tec: 'Angular,SCSS,Git,Firebase',
+          learned:
+            'MYWORK.learnedThird',
+          path: './assets/img/dabubble.JPG',
+          number: './assets/img/3.png',
+          numberDesktop: './assets/img/3-desktop.png',
+          project: 'DABubble' ,
+          git: 'https://github.com/Kaplan-Sauer-Veltens-GbR/DABubble',
+          liveTest: ''
+        },
       ];
 
       getJson():WorkItem[] {

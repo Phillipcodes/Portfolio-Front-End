@@ -37,6 +37,8 @@
     "learnHedline": "What i have learned",
     "aboutSecond" : "A jump-and-run game inspired by popular titles like Super Mario, implemented using object-oriented programming (OOP). Control Pepe, jump through the level, and defeat the final boss to win!",
     "learnedSecond" : "I have learned the application of OOP and class-based programming to develop a well-designed game with complex tasks such as collision detection.",
+    "learnedThird": "I have gained extensive knowledge in implementing a login, transmitting data in real-time, and designing an appealing user interface.",
+    "aboutThird": "DABubble is a chat messenger inspired by Slack. The main focus was to develop a user-friendly messenger using Angular 18, fully compatible with screen readers.",
     "currentWorkHeadline": "Ongoing Projects",
     "currentWork": "Currently, I am working on a simple CRM system with Angular.",
     "button" : "Let´s Talk",
