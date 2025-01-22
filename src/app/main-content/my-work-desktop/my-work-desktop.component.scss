@@ -39,7 +39,7 @@
 
 section {
   display: flex;
-  min-width: 3400px;
+  min-width: 3500px;
   gap: 40px;
 }
 
@@ -177,10 +177,14 @@ span {
 }
 
 .animate0 {
-  animation: slideUp 1.5s ease-out forwards; /* Animation für den Vornamen */
+  animation: slideUp 1.5s ease-out forwards; 
 }
 .animate1 {
-  animation: slideUp 1.5s ease-out forwards; /* Animation für den Vornamen */
+  animation: slideUp 1.5s ease-out forwards; 
+  animation-delay: 1s;
+}
+.animate2 {
+  animation: slideUp 1.5s ease-out forwards; 
   animation-delay: 1s;
 }
 
