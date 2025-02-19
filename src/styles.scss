@@ -6,10 +6,7 @@ html {
   @include desktopMode {
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
-  * {
-    scrollbar-width: thick  ;
-    scrollbar-color: #97ac2f #ffffff;
-  }
+
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
@@ -22,8 +19,8 @@ html {
 
   *::-webkit-scrollbar-thumb {
     background-color: #97ac2f;
-    border-radius: 5px;
-    border: 2px solid #ffffff;
+    // border-radius: 5px;
+    // border: 2px solid #ffffff;
   }
  
 }

@@ -12,29 +12,76 @@
   }
 }
 
-@media (height <= 600px) {
+@media (max-height: 600px) {
   .work-container {
     max-height: 500px;
     overflow-y: scroll;
     margin-top: 15px;
-
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background-color: #888;
-      border-radius: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
   }
 
-  .main-headline {
+  /* Scrollbar-Stile müssen außerhalb der .work-container stehen! */
+  .work-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .work-container::-webkit-scrollbar-button {
+    display: none; /* Pfeile entfernen */
+  }
+
+  .work-container::-webkit-scrollbar-thumb {
+    background: #97ac2f;
+    border-radius: 50px; /* Abgerundete Ecken */
+  }
+
+  .work-container::-webkit-scrollbar-thumb:hover {
+    background: #97ac2f;
+  }
+
+  .work-container::-webkit-scrollbar-track {
+    background: transparent; /* Kein dicker weißer Hintergrund */
+  }
+
+  .work-container::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  @media (max-height: 600px) {
+  .work-container {
+    max-height: 500px;
+    overflow-y: scroll;
     margin-top: 15px;
   }
+
+  /* Scrollbar-Stile müssen außerhalb der .work-container stehen! */
+  .work-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .work-container::-webkit-scrollbar-button {
+    display: none; /* Pfeile entfernen */
+  }
+
+  .work-container::-webkit-scrollbar-thumb {
+    background: #97ac2f;
+    border-radius: 50px; /* Abgerundete Ecken */
+  }
+
+  .work-container::-webkit-scrollbar-thumb:hover {
+    background: #97ac2f;
+  }
+
+  .work-container::-webkit-scrollbar-track {
+    background: transparent; /* Kein dicker weißer Hintergrund */
+  }
+
+  .work-container::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+.main-headline {
+  margin-top: 15px;
+}
 }
 
 section {
@@ -219,3 +266,4 @@ span {
     ); /* Sicherstellen, dass das Element am Ende nicht auf der Originalposition ist */
   }
 }
+

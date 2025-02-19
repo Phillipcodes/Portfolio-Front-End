@@ -82,12 +82,36 @@ header {
     @media(height <= 600px) {
       overflow-y: scroll;
         max-height: 500px;
-        
     }
-  
-
   }
 }
+
+.ref-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.ref-container::-webkit-scrollbar-button {
+  display: none; /* Pfeile entfernen */
+}
+
+.ref-container::-webkit-scrollbar-thumb {
+  background: #97ac2f;
+  border-radius: 50px; /* Abgerundete Ecken */
+}
+
+.ref-container::-webkit-scrollbar-thumb:hover {
+  background: #97ac2f;
+}
+
+.ref-container::-webkit-scrollbar-track {
+  background: transparent; /* Kein dicker weißer Hintergrund */
+}
+
+.ref-container::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 .project {
   color: #d3ed97;
 }
